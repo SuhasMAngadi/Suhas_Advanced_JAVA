@@ -2,6 +2,8 @@ contains()
 
 - The contains() method checks whether the specified string (sequence of characters) is present in the string or not.
 
+Syntax: string.contains(CharSequence ch)
+
 ------
 Example 1:
 
