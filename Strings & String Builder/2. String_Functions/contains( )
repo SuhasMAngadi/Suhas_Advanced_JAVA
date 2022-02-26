@@ -1,0 +1,56 @@
+contains() 
+
+- The contains() method checks whether the specified string (sequence of characters) is present in the string or not.
+
+------
+Example 1:
+
+public class Main
+{
+    public static void main(String[] args) {
+        String str1 = "JAVA";
+        boolean result = str1.contains("AVA");
+        System.out.println(result);
+    }
+}
+
+o/p:
+true
+
+------
+Example 2:
+
+public class Main
+{
+    public static void main(String[] args) {
+        String str1 = "JAVA";
+        boolean result = str1.contains("aV");  
+        System.out.println(result);
+    }
+}
+
+o/p:
+false     //o/p is case sensitive, so it's false here
+
+------
+Example 3:
+
+public class Main
+{
+    public static void main(String[] args) {
+        String str1 = "JAVA";
+        boolean result = str1.contains("");  
+        System.out.println(result);
+    }
+}
+
+o/p:
+true      //Here, str1.contains("") gives true because the empty string is a subset of every other string.
+
+    
+
+
+
+
+
+
