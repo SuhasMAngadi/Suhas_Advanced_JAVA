@@ -1,0 +1,10 @@
+substring( )
+
+- The substring() method extracts a substring from the string and returns it.
+
+Syntax: string.substring(int startIndex, int endIndex)
+
+-----
+Example:
+
+
