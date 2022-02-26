@@ -10,3 +10,9 @@ There are 3 classes to create Strings
 
 String constant pool(String literal pool):
 - It's an area in heap memory where JAVA stores String literal values
+
+
+String Declaraction and initialization:
+
+1. String s = "Suhas";
+2. String s = new String("Suhas");
