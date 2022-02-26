@@ -21,6 +21,5 @@ String Declaraction and initialization:
 2. String s = new String("Suhas");
 
 ------
-
-String Constructors:
+heap
 
