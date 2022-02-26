@@ -1,0 +1,12 @@
+1. It's non-primitive data type, size isn't fixed
+2. sequence of characters or array of characters
+3. String is a class
+4. Strings are immutable
+
+There are 3 classes to create Strings
+1. String
+2. StringBuffer
+3. StringBuilder
+
+String constant pool(String literal pool):
+- It's an area in heap memory where JAVA stores String literal values
