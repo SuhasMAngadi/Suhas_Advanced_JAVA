@@ -1,0 +1,56 @@
+Searching String element:
+
+------
+Example 1:
+
+class Main{
+    public static void main (String[] args) {
+        String[] a = {"Potato", "Suhas", "tomato"};
+        
+        String item = "Suhas"; //search element
+        int temp = 0;
+        for(int i=0;i<a.length; i++)
+        {
+            if(a[i]==item)
+            {
+                System.out.println("Element is fount at index position: "+i);
+                temp = 1;
+            }
+        }
+        if(temp == 0)
+        {
+            System.out.println("Element not found");
+        }
+    }
+}
+
+o/p:
+Element is fount at index position: 1
+
+------
+Example 2:
+
+class Main{
+    public static void main (String[] args) {
+        String[] a = {"Potato", "Suhas", "tomato"};
+        
+        String item = "Suas"; //search element
+        int temp = 0;
+        for(int i=0;i<a.length; i++)
+        {
+            if(a[i]==item)
+            {
+                System.out.println("Element is fount at index position: "+i);
+                temp = 1;
+            }
+        }
+        if(temp == 0)
+        {
+            System.out.println("Element not found");
+        }
+    }
+}
+
+o/p:
+Element not found
+
