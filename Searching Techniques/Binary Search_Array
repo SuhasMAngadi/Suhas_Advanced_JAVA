@@ -1,8 +1,109 @@
 Binary Search Approach: Binary Search is a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. 
 
 Algorithm:
+- sort the input array in ascending order
 - Begin with an interval covering the whole array (Between li and hi). 
-- If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. 
-- Otherwise, narrow it to the upper half. 
+- If the value of the search key is greater than the item in the middle of the interval, narrow the interval to the upper half. 
+- Otherwise, narrow it to the lower half. 
 - Repeatedly check until the value is found or the interval is empty.
+
+------
+Example 1:
+
+//Main.java
+
+import java.util.*;
+class Main{
+    public static void main (String[] args) {
+        int[] a = {2, 4, 6, 10, 34, 5, 8};
+        Arrays.sort(a);
+        System.out.print("Array after sorting: ");
+        for (int i=0; i<a.length;i++)
+        {
+            System.out.print(a[i]+" ");
+        }
+        System.out.println();
+        int search = 34;
+        int li = a[0];   //lowest element
+        int hi = a.length - 1;  //highest element
+        int mi = (li+hi)/2;
+        
+        while(li<=hi)
+        {
+            
+            if(a[mi] == search)
+            {
+                System.out.println("Element found at index position "+mi+" in sorted array");
+                break;
+            }
+            else if(a[mi] < search)
+            {
+                li = mi + 1;
+            }
+            else 
+            {
+                hi = mi - 1;
+            }
+            mi = (li+hi)/2;
+        }
+        if (li>hi)
+        {
+            System.out.println("Element not found");
+        }
+    }
+}
+
+o/p:
+Array after sorting: 2 4 5 6 8 10 34 
+Element found at index position 6 in sorted array
+
+------
+Example 2:
+
+//Main.java
+
+import java.util.*;
+class Main{
+    public static void main (String[] args) {
+        int[] a = {2, 4, 6, 10, 34, 5, 8};
+        Arrays.sort(a);
+        System.out.print("Array after sorting: ");
+        for (int i=0; i<a.length;i++)
+        {
+            System.out.print(a[i]+" ");
+        }
+        System.out.println();
+        int search = 88;
+        int li = a[0];   //lowest element
+        int hi = a.length - 1;  //highest element
+        int mi = (li+hi)/2;
+        
+        while(li<=hi)
+        {
+            
+            if(a[mi] == search)
+            {
+                System.out.println("Element found at index position "+mi+" in sorted array");
+                break;
+            }
+            else if(a[mi] < search)
+            {
+                li = mi + 1;
+            }
+            else 
+            {
+                hi = mi - 1;
+            }
+            mi = (li+hi)/2;
+        }
+        if (li>hi)
+        {
+            System.out.println("Element not found");
+        }
+    }
+}
+
+o/p:
+Array after sorting: 2 4 5 6 8 10 34 
+Element not found
 
