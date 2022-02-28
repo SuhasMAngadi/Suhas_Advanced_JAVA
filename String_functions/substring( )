@@ -4,7 +4,58 @@ substring( )
 
 Syntax: string.substring(int startIndex, int endIndex)
 
+The substring() method takes two parameters:
+1. startIndex - the beginning index
+2. endIndex (optional) - the ending index
+
+
+- The substring begins with the character at the startIndex and extends to the character at index endIndex - 1.
+- If the endIndex is not passed, the substring begins with the character at the specified index and extends to the end of the string.
+
 -----
-Example:
+Example 1: substring() Without End Index
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "program";
+
+    // from the first character to the end
+    System.out.println(str1.substring(0));  // program
+
+
+    // from the 4th character to the end
+    System.out.println(str1.substring(3));  // gram
+  }
+}
+
+o/p:
+program
+gram
+
+-----
+Example 2: substring() With End Index
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "program";
+
+    // from 1st to the 7th  character
+    System.out.println(str1.substring(0, 7));  // program
+
+    // from 1st to the 5th  character
+    System.out.println(str1.substring(0, 5));  // progr
+
+
+    // from 4th to the 5th character
+    System.out.println(str1.substring(3, 5));  // gr
+  }
+}
+
+o/p:
+program
+progr
+gr
+
+
 
 
