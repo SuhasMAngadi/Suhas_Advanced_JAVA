@@ -1,4 +1,50 @@
 Insertion Sort: Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands.
-The array is virtually split into a sorted and an unsorted part.Values from the unsorted part are picked and placed at the
+The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the
 correct position in the sorted part.
+
+---------
+Algorithm:
+
+1. We start with second element of given array i.e element at index 1, which shall be the key.
+The key element here is the new card that we need to add to existing sorted set of cards.
+
+2. We compare the key element with element(s) before it, in this element at index 0:
+   2.1 If the key element is less than first element, we insert the key element before first element.
+   2.2 If the key element is greater than first element, we insert the key element after first element.
+   
+3. Similarly, we make third element as the key element and compare it with elements to it's left and insert it at the correct position.
+
+4. Repeat the process, until array is sorted.
+
+--------
+Example:
+
+class Main
+{
+    public static void main(String[] args) {
+        int[] a = {5, 1, 6, 2, 4, 3};
+        int temp, j;
+        for(int i=1; i<a.length;i++)
+        {
+            temp = a[i];
+            j=i;
+            while(j>0 && a[j-1]>temp)
+            {
+                a[j]=a[j-1];
+                j=j-1;
+            }
+            a[j] = temp;
+        }
+        for(int i=0; i<a.length;i++)
+        {
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+
+o/p:
+1 2 3 4 5 6 
+
+
+
 
