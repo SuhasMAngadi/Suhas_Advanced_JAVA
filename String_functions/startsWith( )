@@ -1,1 +1,49 @@
+The startsWith() method checks whether the string begins with the specified string or not.
 
+Syntax of startsWith():  string.startsWith(String str, int offset)
+
+startsWith() Return Value:
+returns true if the string begins with the given string
+returns false if the string doesn't begin with the given string
+
+-----
+Example 1: Java startsWith() Without Offset Parameter
+
+class Main {
+  public static void main(String[] args) {
+
+    String str = "Java Programming";
+
+    System.out.println(str.startsWith("Java")); // true
+    System.out.println(str.startsWith("J")); // true
+    System.out.println(str.startsWith("Java Program")); // true
+    System.out.println(str.startsWith("java")); // false
+    System.out.println(str.startsWith("ava")); // false
+  }
+}
+
+o/p:
+true
+true
+true
+false
+false
+
+-----
+Example 2: Java startsWith() With Offset Parameter
+
+class Main {
+  public static void main(String[] args) {
+
+    String str = "Java Programming";
+
+    // checks in substring "a Programming"
+    System.out.println(str.startsWith("Java", 3)); // false
+    System.out.println(str.startsWith("a Pr", 3)); // true
+
+  }
+}
+
+o/p:
+false
+true
