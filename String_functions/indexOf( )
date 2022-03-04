@@ -1,1 +1,79 @@
+The indexOf() method returns the index of the first occurrence of the specified character/substring within the string.
+
+-----
+Syntax of indexOf():  string.indexOf(int ch, int fromIndex)
+                      or
+                      string.indexOf(String str, int fromIndex)
+-----
+indexOf() Return Value:
+
+returns the index of the first occurrence of the specified character/string
+returns -1 if the specified character/string is not found.
+
+-----
+
+Example 1: Java String indexOf()
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "Learn Java";
+    int result;
+
+    // getting index of character 'J'
+    result = str1.indexOf('J');
+    System.out.println(result); // 6
+
+    // the first occurrence of 'a' is returned
+    result = str1.indexOf('a');
+    System.out.println(result); // 2
+
+    // character not in the string
+    result = str1.indexOf('j');
+    System.out.println(result); // -1
+
+    // getting the index of "ava"
+    result = str1.indexOf("ava");
+    System.out.println(result); // 7
+
+    // substring not in the string
+    result = str1.indexOf("java");
+    System.out.println(result); // -1
+
+    // index of empty string in the string
+    result = str1.indexOf("");
+    System.out.println(result); // 0
+  }
+}
+
+o/p:
+6
+2
+-1
+7
+-1
+0
+
+-----
+Example 2: indexOf() With fromIndex Parameter
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "Learn Java programming";
+    int result;
+
+    // getting the index of character 'a', search starts at index 4 
+    result = str1.indexOf('a', 4);
+    System.out.println(result);  // 7
+
+    // getting the index of "Java", search starts at index 8
+    result = str1.indexOf("Java", 8);
+    System.out.println(result);  // -1
+  }
+}
+
+o/p:
+7
+-1
+
+
 
