@@ -1,1 +1,31 @@
+The Java String endsWith() method checks whether the string ends with the specified string or not.
+
+syntax of the string endsWith():  string.endsWith(String str)
+
+endsWith() Return Value:
+returns true if the string ends with the given string
+returns false if the string doesn't end with the given string
+
+-----
+Example: Java endsWith() Without Offset Parameter
+
+class Main {
+  public static void main(String[] args) {
+
+    String str = "Java Programming";
+
+    System.out.println(str.endsWith("mming")); // true
+    System.out.println(str.endsWith("g")); // true
+    System.out.println(str.endsWith("a Programming")); // true
+    System.out.println(str.endsWith("programming")); // false
+    System.out.println(str.endsWith("Java")); // false
+  }
+}
+
+o/p:
+true
+true
+true
+false
+false
 
