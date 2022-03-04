@@ -1,1 +1,59 @@
+The join() method returns a new string with the given elements joined with the specified delimiter.
+
+-----
+Syntax of join():   String.join(CharSequence delimiter, Iterable elements)
+                    or
+                    String.join(CharSequence delimiter, CharSequence... elements)
+-----                    
+Note: join() is a static method. You do not need to create a string object to call this method. Rather, we call the method using the class name String.
+
+-----
+Example 1: Java String join() With CharSequence()
+
+class Main {
+  public static void main(String[] args) {
+    String result;
+
+    result = String.join("-", "Java", "is", "fun");
+
+    System.out.println(result);  // Java-is-fun
+
+  }
+}
+
+o/p:
+Java-is-fun
+
+-----
+Example 2: Java String join() With Iterable
+
+import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args) {
+    ArrayList<String> text = new ArrayList<>();
+
+    // adding elements to the arraylist
+    text.add("Suhas");
+    text.add("is");
+    text.add("awesome");
+
+    String result;
+
+    result = String.join("_", text);
+
+    System.out.println(result); 
+
+  }
+}
+
+o/p:
+Suhas_is_awesome
+
+
+
+
+            
+
+
 
