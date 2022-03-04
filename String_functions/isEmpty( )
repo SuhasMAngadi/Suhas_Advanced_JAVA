@@ -1,1 +1,29 @@
+The Java String isEmpty() method checks whether the string is empty or not.
+
+syntax of the string isEmpty():  string.isEmpty()
+
+isEmpty() Return Value:
+returns true if the string is empty (length is 0)
+returns false if the string is not empty
+
+-----
+Example: Java String isEmpty()
+
+class Main {
+  public static void main(String[] args) {
+
+    String str1 = "Java Programming";
+    String str2 = "";
+
+    System.out.println(str1.isEmpty()); // false
+    System.out.println(str2.isEmpty()); // true
+
+  }
+}
+
+o/p:
+
+false
+true
+
 
