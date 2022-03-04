@@ -1,1 +1,99 @@
+The split() method divides the string at the specified regex and returns an array of substrings.
 
+-----
+Syntax of String split(): string.split(String regex, int limit)
+
+Note: If the regular expression passed to split() is invalid, the split() method raises PatternSyntaxExpression exception.
+
+The string split() method can take two parameters:
+
+regex - the string is divided at this regex (can be strings)
+limit (optional) - controls the number of resulting substrings
+
+-----
+Example 1: split() Without limit Parameter
+
+import java.util.Arrays;
+
+class Main {
+  public static void main(String[] args) {
+    String vowels = "a::b::c::d:e";
+
+    // splitting the string at "::"
+    // storing the result in an array of strings
+    String[] result = vowels.split("::");
+
+
+    // converting array to string and printing it
+    System.out.println("result = " + Arrays.toString(result));
+  }
+}
+
+o/p:
+result = [a, b, c, d:e]
+
+-----
+split() With limit Parameter:
+If the limit parameter is 0 or negative, split() returns an array containing all substrings.
+If the limit parameter is positive (let's say n), split() returns the maximum of n substrings.
+
+Example 2: split() With limit Parameter
+
+// importing Arrays to convert array to string
+import java.util.Arrays;
+
+class Main {
+  public static void main(String[] args) {
+    String vowels = "a:bc:de:fg:h";
+
+    // splitting array at ":"
+
+    // limit is -2; array contains all substrings
+    String[] result = vowels.split(":", -2);
+    System.out.println("result when limit is -2 = " + Arrays.toString(result));
+
+    // limit is 0; array contains all substrings
+    result = vowels.split(":", 0);
+    System.out.println("result when limit is 0 = " + Arrays.toString(result));
+
+    // limit is 2; array contains a maximum of 2 substrings
+    result = vowels.split(":", 2);
+    System.out.println("result when limit is 2 = " + Arrays.toString(result));
+
+    // limit is 4; array contains a maximum of 4 substrings
+    result = vowels.split(":", 4);
+    System.out.println("result when limit is 4 = " + Arrays.toString(result));
+
+    // limit is 10; array contains a maximum of 10 substrings
+    result = vowels.split(":", 10);
+    System.out.println("result when limit is 10 = " + Arrays.toString(result));
+  }
+}
+
+o/p:
+result when limit is -2 = [a, bc, de, fg, h]
+result when limit is 0 = [a, bc, de, fg, h]
+result when limit is 2 = [a, bc:de:fg:h]
+result when limit is 4 = [a, bc, de, fg:h]
+result when limit is 10 = [a, bc, de, fg, h]
+
+-----
+Example 3: split() at the + character
+
+import java.util.Arrays;
+
+class Main {
+  public static void main(String[] args) {
+    String vowels = "a+e+f";
+
+    // splitting the string at "+"
+    String[] result = vowels.split("\\+");
+
+
+    // converting array to string and printing it
+    System.out.println("result = " + Arrays.toString(result));
+  }
+}
+
+o/p:
+result = [a, e, f]
