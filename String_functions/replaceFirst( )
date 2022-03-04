@@ -1,1 +1,25 @@
+The Java String replaceFirst() method replaces the first substring that matches the regex of the string with the specified text.
+
+-----
+Java String replaceFirst():  string.replaceFirst(String regex, String replacement)
+
+-----
+Example 1: Java String replaceFirst()
+
+class Main {
+  public static void main(String[] args) {
+      String str1 = "aabbaaac";
+      String str2 = "Learn223Java55@";
+
+      String regex = "\\d+";    // regex for sequence of digits
+      
+      System.out.println(str1.replaceFirst("aa", "zz"));  // the first occurrence of "aa" is replaced with "zz"
+
+      System.out.println(str2.replaceFirst(regex, " "));  // replace the first sequence of digits with a whitespace
+  }
+}
+
+o/p:
+zzbbaaac
+Learn Java55@
 
