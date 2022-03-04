@@ -1,1 +1,43 @@
+The trim() method removes any leading (starting) and trailing (ending) whitespaces from the specified string.
+
+-----
+Syntax of trim():  string.trim()
+
+-----
+trim() Return Value:
+
+returns a string with leading and trailing whitespace removed
+returns the original string if there is no whitespace in the start or the end of the string
+
+-----
+Example: Java String trim()
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "     Learn   Java Programming ";
+    String str2 = "Learn\nJava Programming\n\n   ";
+    String str3 = "     Suhas Potato        ";
+
+
+    System.out.println(str1.trim());
+    System.out.println(str2.trim());
+    System.out.println(str3.trim());
+
+  }
+}
+
+
+o/p:
+Learn   Java Programming
+Learn
+Java Programming
+Suhas Potato
+
+//As you can see from the above example, the trim() method only removes the leading and trailing whitespace.
+It doesn't remove whitespace that appears in the middle.
+
+
+
+
+
 
