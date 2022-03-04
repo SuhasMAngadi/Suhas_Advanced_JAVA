@@ -1,1 +1,21 @@
+The Java String toUpperCase() method converts all characters in the string to upper case characters.
 
+Java String toUpperCase():  string.toUpperCase()
+
+-----
+Example: Java toUpperCase()
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "suHas";
+    String str2 = "Java123";
+
+    // convert to upper case letters
+    System.out.println(str1.toUpperCase()); // "SUHAS"
+    System.out.println(str2.toUpperCase()); // "JAVA123"
+  }
+}
+
+o/p:
+SUHAS
+JAVA123
