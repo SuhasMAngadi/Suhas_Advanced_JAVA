@@ -10,10 +10,11 @@ IMPORTANT:
 What is Java String Interning?
 The String interning ensures that all strings having the same contents use the same memory.
 
-Suppose, we these two strings:
+Suppose, we have these two strings:
 
 String str1 = "xyz";
 String str2 = "xyz";
+
 Since both str1 and str2 have the same contents, both these strings will share the same memory. Java automatically interns the string literals.
 
 However, if you create strings with using the new keyword, these strings won't share the same memory. For example,
