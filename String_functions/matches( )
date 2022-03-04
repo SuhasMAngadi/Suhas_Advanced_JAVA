@@ -1,1 +1,58 @@
+The matches() method checks whether the string matches the given regular expression or not.
+
+Syntax of matches(): string.matches(String regex)
+
+matches() Return Value:
+returns true if the regex matches the string
+returns false if the regex doesn't match the string
+
+-----
+Example 1: Java matches()
+
+class Main {
+  public static void main(String[] args) {
+
+    // a regex pattern for
+    // five letter string that starts with 'a' and end with 's'
+    String regex = "^a...s$";
+
+    System.out.println("abs".matches(regex)); // false
+    System.out.println("alias".matches(regex)); // true
+    System.out.println("an abacus".matches(regex)); // false
+    System.out.println("abyss".matches(regex)); // true
+  }
+}
+
+o/p:
+false
+true
+false
+true
+
+//Here, "^a...s$" is a regex, which means a 5 letter string that starts with a and ends with s.
+
+-----
+Example 2: Check for Numbers
+
+// check whether a string contains only numbers
+
+class Main {
+  public static void main(String[] args) {
+
+    // a search pattern for only numbers
+    String regex = "^[0-9]+$";
+
+    System.out.println("123a".matches(regex)); // false
+    System.out.println("98416".matches(regex)); // true
+    System.out.println("98 41".matches(regex)); // false
+  }
+}
+
+o/p:
+false
+true
+false
+
+
+
 
