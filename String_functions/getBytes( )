@@ -1,1 +1,100 @@
+The Java String getBytes() method encodes the string into a sequence of bytes and stores it in a byte array.
+
+-----
+The syntax of the String getBytes() method are:
+string.getBytes()
+string.getBytes(Charset charset)
+string.getBytes(String charsetName)
+
+-----
+Example1 : getBytes() Without Any Parameters
+
+import java.util.Arrays;
+
+class Main {
+  public static void main(String[] args) {
+
+    String str = "Java";
+    byte[] byteArray;
+
+    // convert the string to a byte array
+    // using platform's default charset
+    byteArray = str.getBytes();
+    System.out.println(Arrays.toString(byteArray));
+  }
+}
+
+o/p:
+[74, 97, 118, 97]
+
+-----
+Example2 : getBytes() With CharSet Parameter
+
+Here are different CharSet available in java:
+
+UTF-8 - Eight-bit UCS Transformation Format
+UTF-16 - Sixteen-bit UCS Transformation Format
+UTF-16BE - Sixteen-bit UCS Transformation Format, big-endian byte order
+UTF-16LE - Sixteen-bit UCS Transformation Format, little-endian byte order
+US-ASCII - Seven-bit ASCII
+ISO-8859-1 - ISO Latin Alphabet No. 1
+
+import java.util.Arrays;
+import java.nio.charset.Charset;
+
+class Main {
+  public static void main(String[] args) {
+
+    String str = "Java";
+    byte[] byteArray;
+
+    // using UTF-8 for encoding
+    byteArray = str.getBytes(Charset.forName("UTF-8"));
+    System.out.println(Arrays.toString(byteArray));
+
+    // using UTF-16 for encoding
+    byteArray = str.getBytes(Charset.forName("UTF-16"));
+    System.out.println(Arrays.toString(byteArray));
+  }
+}
+
+o/p:
+[74, 97, 118, 97]
+[-2, -1, 0, 74, 0, 97, 0, 118, 0, 97]
+
+-----
+Example3 : getBytes() With String Parameter
+
+import java.util.Arrays;
+
+class Main {
+  public static void main(String[] args) {
+
+    String str = "Java";
+    byte[] byteArray;
+
+    try {
+      byteArray = str.getBytes("UTF-8");
+      System.out.println(Arrays.toString(byteArray));
+
+      byteArray = str.getBytes("UTF-16");
+      System.out.println(Arrays.toString(byteArray));
+
+      // wrong encoding
+      // throws an exception
+      byteArray = str.getBytes("UTF-34");
+      System.out.println(Arrays.toString(byteArray));
+
+    } catch (Exception e) {
+      System.out.println(e + " encoding is wrong");
+    }
+
+  }
+}
+
+o/p:
+[74, 97, 118, 97]
+[-2, -1, 0, 74, 0, 97, 0, 118, 0, 97]
+java.io.UnsupportedEncodingException: UTF-34 encoding is wrong
+
 
