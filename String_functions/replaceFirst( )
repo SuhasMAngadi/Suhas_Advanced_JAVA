@@ -4,7 +4,7 @@ The Java String replaceFirst() method replaces the first substring that matches 
 Java String replaceFirst():  string.replaceFirst(String regex, String replacement)
 
 -----
-Example 1: Java String replaceFirst()
+Example: Java String replaceFirst()
 
 class Main {
   public static void main(String[] args) {
