@@ -1,1 +1,23 @@
+To find the length of a string, we use the length() method of the String
 
+the length() method calculates the total number of characters in the string and returns it.
+
+-----
+Example: 
+
+class Main {
+  public static void main(String[] args) {
+
+    // create a string
+    String greet = "Hello! World";
+    System.out.println("String: " + greet);
+
+    // get the length of greet
+    int length = greet.length();
+    System.out.println("Length: " + length);
+  }
+}
+
+o/p:
+String: Hello! World
+Length: 12
