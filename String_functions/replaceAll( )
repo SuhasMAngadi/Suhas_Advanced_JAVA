@@ -1,1 +1,26 @@
+The replaceAll() method replaces each substring that matches the regex(regular expression) of the string with the specified text.
+
+-----
+Syntax of replaceAll():  string.replaceAll(String regex, String replacement)
+
+-----
+Example: Java String replaceAll()
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "aabbaaac";
+    String str2 = "Learn223Java55@";
+
+    String regex = "\\d+";    // regex for sequence of digits
+    
+    System.out.println(str1.replaceAll("aa", "zz"));    // all occurrences of "aa" is replaceAll with "zz"
+
+    System.out.println(str2.replaceAll(regex, " "));    // replace a digit or sequence of digits with a whitespace
+  }
+}
+
+o/p:
+zzbbzzac
+Learn Java @
+
 
