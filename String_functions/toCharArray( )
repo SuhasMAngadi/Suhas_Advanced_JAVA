@@ -1,1 +1,21 @@
+The Java String toCharArray() method converts the string to a char array and returns it.
 
+The syntax of the toCharArray() method is:  string.toCharArray()
+
+-----
+Example: Java String toCharArray()
+
+class Main {
+  public static void main(String[] args) {
+    String str = "Java Programming";
+
+    // creating a char array
+    char[] result;
+
+    result = str.toCharArray();
+    System.out.println(result); // Java Programming
+  }
+}
+
+o/p:
+Java Programming
