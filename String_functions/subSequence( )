@@ -1,1 +1,19 @@
+The Java String subSequence() method returns a character sequence (a subsequence) from the string.
 
+syntax of the subSequence():  string.subSequence(int startIndex, int endIndex)
+
+subSequence() Return Value: The subSequence() method returns a CharSequence.
+
+-----
+Example: Java String subSequence()
+
+class Main {
+  public static void main(String[] args) {
+    String str = "Java Programming";
+
+    System.out.println(str.subSequence(3, 8)); // a Pro
+  }
+}
+
+o/p:
+a Pro
