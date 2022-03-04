@@ -1,1 +1,36 @@
+The Java String hashCode() method returns a hash code for the string.
+
+A hashcode is a number (object's memory address) generated from any object, not just strings.
+This number is used to store/retrieve objects quickly in a hashtable.
+
+syntax of the string hashCode():  string.hashCode()
+
+hashCode() Return Value:
+returns the hashcode, which is an int value, of the string
+
+-----
+Example: Java String hashCode()
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "Java";
+    String str2 = "Java Programming";
+    String str3 = "";
+
+    System.out.println(str1.hashCode()); // 2301506
+    System.out.println(str2.hashCode()); // 1377009627
+
+    // hash code of empty string is 0
+    System.out.println(str3.hashCode()); // 0
+
+  }
+}
+
+o/p:
+2301506
+1377009627
+0
+
+// Note: For two strings to be equal, their hash code also must be equal.
+
 
