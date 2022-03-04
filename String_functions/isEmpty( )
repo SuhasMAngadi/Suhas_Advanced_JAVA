@@ -26,4 +26,5 @@ o/p:
 false
 true
 
-
+// Note: A non-initialized string is not an empty string.
+If you use isEmpty() on a string that is not initialized, you will get an error.
