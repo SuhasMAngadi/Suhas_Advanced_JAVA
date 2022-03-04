@@ -1,1 +1,117 @@
+The valueOf() method returns the string representation of the argument passed.
+
+Syntax of valueOf(): The syntax of the String valueOf() method for different data types is:
+
+String.valueOf(boolean b)
+String.valueOf(char c)
+String.valueOf(char[] data)
+String.valueOf(double d)
+String.valueOf(float f)
+String.valueOf(int b)
+String.valueOf(long l)
+String.valueOf(Object o)
+
+Here, valueOf() is a static method. We call the valueof() method using the class name like this: String.valueOf(b);
+
+-----
+Example 1: Java String valueOf() for Numbers
+
+class Main {
+  public static void main(String[] args) {
+    int a = 5;
+    long l = -2343834L;
+    float f = 23.4f;
+    double d = 923.234d;
+
+    // convert numbers to strings
+    System.out.println(String.valueOf(a));  // "5"
+    System.out.println(String.valueOf(l));  // "-2343834"
+    System.out.println(String.valueOf(f));  // "23.4"
+    System.out.println(String.valueOf(d));  // "923.234"
+  }
+}
+
+o/p:
+5
+-2343834
+23.4
+923.234
+
+-----
+Example 2: Convert char and char array to String
+
+class Main {
+  public static void main(String[] args) {
+    char c = 'J';
+    char ch[] = {'J', 'a', 'v', 'a'};
+
+    // convert char to string
+    System.out.println(String.valueOf(c));  // "J"
+
+
+    // convert char array to string
+    System.out.println(String.valueOf(ch));  // "Java"
+
+  }
+}
+
+o/p:
+J
+Java
+
+-----
+Example 3: Subarray of a char Array to String
+
+Syntax: valueOf(char[] data, int offset, int length)
+
+Here,
+
+data - the character array
+offset - initial offset of the subarray
+count - the length of the subarray
+
+class Main {
+  public static void main(String[] args) {
+    char ch[] = {'p', 'r', 'o', 'g', 'r', 'a', 'm'};
+    int offset = 2;
+    int length = 4;
+    String result;
+
+    // subarray {'o', 'g', 'r', 'a'} is converted to string
+    result = String.valueOf(ch, offset, length);
+
+    System.out.println(result);  // "ogra"
+  }
+}
+
+o/p:
+ogra
+
+-----
+Example 4: Convert Object to String
+
+import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args) {
+
+    ArrayList<String> languages = new ArrayList<String>();
+    languages.add("Java");
+    languages.add("Python");
+    languages.add("Kotlin");
+
+    String result;
+
+    // Output: "[Java, Python, Kotlin]"
+    result = String.valueOf(languages);
+
+    System.out.println(result);
+  }
+}
+
+o/p:
+[Java, Python, Kotlin]
+
+
+
 
