@@ -1,1 +1,60 @@
+The Java String contentEquals() method checks whether the contents of the String is equal to the specified charSequence/StringBuffer or not.
+
+syntax of the string contentEquals():  string.contentEquals(StringBuffer sb)
+                                       string.contentEquals(charSequence cs)
+
+contentEquals() Return Value:
+Returns true if the string contains the same sequence of characters as the specified parameter. If not, returns false.
+
+-----
+Example: Java String contentEquals()
+
+class Main {
+  public static void main(String[] args) {
+    String str = "Java";
+
+    String str1 = "Java";
+    StringBuffer sb1 = new StringBuffer("Java");
+    CharSequence cs1 = "Java";
+
+    String str2 = "JavA";
+    StringBuffer sb2 = new StringBuffer("JavA");
+    CharSequence cs2 = "JavA";
+
+    System.out.println(str.contentEquals(str1)); // true
+    System.out.println(str.contentEquals(sb1)); // true
+    System.out.println(str.contentEquals(cs1)); // true
+
+    System.out.println(str.contentEquals(str2)); // false
+    System.out.println(str.contentEquals(sb2)); // false
+    System.out.println(str.contentEquals(cs2)); // false
+  }
+}
+
+o/p:
+true
+true
+true
+false
+false
+false
+
+-----
+Java String equals() Vs contentEquals()
+
+The Java String equals() method not only compares the content, but also checks if the other object is an instance of String.
+However, contentEquals() only compares the content. For example,
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "Java";
+    StringBuffer sb1 = new StringBuffer("Java");
+
+    System.out.println(str1.equals(sb1)); // false
+    System.out.println(str1.contentEquals(sb1)); // true
+  }
+}
+
+Here, both str1 and sb1 have the same content but they are instance of different objects.
+Hence, str1.equals(sb1) returns false and str1.contentEquals(sb1) returns true.
 
