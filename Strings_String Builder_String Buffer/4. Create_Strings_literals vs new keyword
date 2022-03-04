@@ -1,0 +1,21 @@
+In Java, the JVM maintains a string pool to store all of its strings inside the memory. The string pool helps in reusing the strings.
+
+1. While creating strings using string literals,
+
+String example = "Java";
+
+Here, we are directly providing the value of the string (Java). Hence, the compiler first checks the string pool to see if the string already exists.
+
+If the string already exists, the new string is not created. Instead, the new reference, 'example' points to the already existed string (Java).
+If the string doesn't exist, the new string (Java) is created.
+
+
+-----
+2. While creating strings using the new keyword,
+
+String example = new String("Java");
+
+Here, the value of the string is not directly provided.
+Hence, a new "Java" string is created even though "Java" is already present inside the memory pool.
+
+
