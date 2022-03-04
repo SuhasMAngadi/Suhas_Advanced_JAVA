@@ -1,0 +1,38 @@
+In Java, strings are immutable. This means, once we create a string, we cannot change that string.
+
+To understand it more deeply, consider an example:
+
+// create a string
+String example = "Hello! ";
+
+Here, we have created a string variable named example. The variable holds the string "Hello! ".
+
+Now suppose we want to change the string.
+
+// add another string "World", to the previous tring example
+
+example.concat(" World");
+
+Here, we are using the concat() method to add another string World to the previous string.
+
+It looks like we are able to change the value of the previous string. However, this is not true.
+
+Let's see what has happened here,
+
+JVM takes the first string "Hello! "
+creates a new string by adding "World" to the first string
+the first string "Hello! " remains unchanged
+
+-----
+Example:
+
+class Main {
+  public static void main(String[] args) {
+    String example = "Hello! ";
+    example.concat("World");
+    System.out.println(example);
+  }   
+}
+
+o/p:
+Hello!
