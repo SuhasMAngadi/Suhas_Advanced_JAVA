@@ -1,1 +1,64 @@
+The Java String intern() method returns a canonical representation of the string object.
+
+syntax of the string intern()
+
+string.intern()
+
+----------
+IMPORTANT:
+
+What is Java String Interning?
+The String interning ensures that all strings having the same contents use the same memory.
+
+Suppose, we these two strings:
+
+String str1 = "xyz";
+String str2 = "xyz";
+Since both str1 and str2 have the same contents, both these strings will share the same memory. Java automatically interns the string literals.
+
+However, if you create strings with using the new keyword, these strings won't share the same memory. For example,
+
+class Main {
+  public static void main(String[] args) {
+
+    String str1 = new String("xyz");
+    String str2 = new String("xyz");
+
+
+    System.out.println(str1 == str2); // false
+
+  }
+}
+As you can see from this example, both str1 and str2 have the same content. However, they are not equal because they don't share the same memory.
+
+In this case, you can manually use the intern() method so that the same memory is used for strings having the same content.
+
+----------
+Example: Java String intern()
+
+class Main {
+  public static void main(String[] args) {
+
+    String str1 = new String("xyz");
+    String str2 = new String("xyz");
+
+    // str1 and str2 doesn't share the same memory pool
+    System.out.println(str1 == str2); // false
+
+    // using the intern() method
+    // now both str1 and str2 share the same memory pool
+    str1 = str1.intern();
+    str2 = str2.intern();
+
+    System.out.println(str1 == str2); // true
+  }
+}
+
+o/p:
+false
+true
+
+
+
+
 
