@@ -1,1 +1,22 @@
+The toLowerCase() method converts all characters in the string to lowercase characters.
 
+Syntax of toLowerCase():  string.toLowerCase()
+
+-----
+Example: Java toLowerCase()
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "Learn Java";
+    String str2 = "SuHAs";
+
+    // convert to lowercase letters
+    System.out.println(str1.toLowerCase());  // "learn java"
+    System.out.println(str2.toLowerCase());  // "suhas"
+
+  }
+}
+
+o/p:
+learn java
+suhas
