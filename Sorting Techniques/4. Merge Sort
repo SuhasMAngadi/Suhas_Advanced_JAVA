@@ -16,7 +16,7 @@ class MergeSort
         MergeSort ms = new MergeSort();
         ms.sort(inputArr);
         
-        for(int i: inputArr)
+        for(int i:inputArr)
         {
             System.out.print(i+" ");
         }
@@ -26,6 +26,7 @@ class MergeSort
         this.array = inputArr;
         this.length = inputArr.length;
         this.tempMergeArr = new int[length];
+        divideArray(0, length-1);
     }
     public void divideArray (int lowerindex, int higherindex)
     {
@@ -36,6 +37,8 @@ class MergeSort
             divideArray(lowerindex, middle); //will sort left side of an array (refer the image)
             
             divideArray(middle+1, higherindex); //will sort right side of an array (refer the image)
+            
+            mergeArray(lowerindex, middle, higherindex);
         }
     }
     public void mergeArray (int lowerindex, int middle, int higherindex)
@@ -69,3 +72,8 @@ class MergeSort
         }
     }
 }
+
+o/p:
+13 19 21 36 48 52 
+
+
