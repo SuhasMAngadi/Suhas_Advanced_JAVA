@@ -6,5 +6,9 @@
 
 <img width="821" alt="Collection_Hierarchy" src="https://user-images.githubusercontent.com/98903088/156883398-01cabe1b-4833-4852-aa36-647a4e248f37.png">
 
+3. Working of a Java LinkedList:
+
+
+
 
 
