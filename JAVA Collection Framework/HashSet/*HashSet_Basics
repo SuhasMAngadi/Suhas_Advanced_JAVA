@@ -26,9 +26,9 @@ Constructors of Java HashSet class:
 
 1) HashSet() -	It is used to construct a default HashSet.
 2) HashSet(int capacity) - It is used to initialize the capacity of the hash set to the given integer value capacity.
-    The capacity grows automatically as elements are added to the HashSet.
+   The capacity grows automatically as elements are added to the HashSet.
 3) HashSet(int capacity, float loadFactor)	- It is used to initialize the capacity of the hash set to the given 
-    integer value capacity and the specified load factor.
+   integer value capacity and the specified load factor.
 4) HashSet(Collection c) - It is used to initialize the hash set by using the elements of the collection c.
 
 ------------------------------------------------------------
