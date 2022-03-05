@@ -1,0 +1,19 @@
+The performance of the hashmap is based upon two significant factors :
+
+1. Initial Capacity
+2. Load Factor
+
+ - Initial Capacity: The initial number of buckets a hashmap has when its instance is created.
+Its default value is 16. That is, initially, the hash map can store 16 key-value elements.
+
+ - Load Factor: It is a measure of how much percentage the hashmap is allowed to fill before its capacity increases.
+The default load factor value is 0.75, ranging between 0 to 1 usually.
+
+ - Threshold: It is the product of the load factor and the capacity of the hashmap.
+Default threshold value is 0.75*16= 12. When 12 elements are filled in the hashmap,
+we need to stop inserting more elements into it. Rehashing will be done,
+which will double the capacity of the hashmap.
+
+ - Rehashing: It is a way of doubling the capacity when the threshold value is reached. 
+When the threshold value is crossed, the rehashing is done so that the bucket now
+has twice the capacity and the operation takes less time.
