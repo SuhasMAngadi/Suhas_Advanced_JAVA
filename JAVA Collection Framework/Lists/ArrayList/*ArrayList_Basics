@@ -1,1 +1,15 @@
-1
+- The ArrayList class of the Java collections framework provides the functionality of resizable-arrays.
+- Arraylists are also known as dynamic arrays.
+- duplicates and heterogenous objects are allowed (excepts TreeSet and TreeMap).
+- insertion order is preserved.
+- Java ArrayList allows random access because array works at the index basis.
+- Null insertion is possible.
+
+Declaration: ArrayList<Type> arrayList= new ArrayList<>();
+
+Constructors of ArrayList: 
+
+1. ArrayList() - It is used to build an empty array list.
+2. ArrayList(Collection c) - It is used to build an array list that is initialized with the elements of the collection c.
+3. ArrayList(int capacity) - It is used to build an array list that has the specified initial capacity.
+
