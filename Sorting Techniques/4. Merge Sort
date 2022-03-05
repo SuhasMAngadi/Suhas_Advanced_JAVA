@@ -1,2 +1,71 @@
+The merge sort algorithm is based on the principle of divide and conquer algorithm where a problem is divided into multiple sub-problems.
+Each sub-problem is solved individually and finally, sub-problems are combined to form the final solutions.
 
-<img width="684" alt="Merge_Sort" src="https://user-images.githubusercontent.com/98903088/156869351-43bd4e4f-685f-4f98-a3c7-8f22eb32f097.png">
+Checkout the image in 'images' folder of this repo to understand the detailed implementation of algorithm.
+
+//MergeSort.java
+
+class MergeSort
+{
+    int[] array;
+    int[] tempMergeArr;
+    int length;
+    
+    public static void main(String[] args) {
+        int[] inputArr = {48, 36, 13, 52, 19, 21};
+        MergeSort ms = new MergeSort();
+        ms.sort(inputArr);
+        
+        for(int i: inputArr)
+        {
+            System.out.print(i+" ");
+        }
+    }
+    public void sort(int inputArr[])
+    {
+        this.array = inputArr;
+        this.length = inputArr.length;
+        this.tempMergeArr = new int[length];
+    }
+    public void divideArray (int lowerindex, int higherindex)
+    {
+        if(lowerindex<higherindex)
+        {
+            int middle = lowerindex + (higherindex - lowerindex)/2;
+            
+            divideArray(lowerindex, middle); //will sort left side of an array (refer the image)
+            
+            divideArray(middle+1, higherindex); //will sort right side of an array (refer the image)
+        }
+    }
+    public void mergeArray (int lowerindex, int middle, int higherindex)
+    {
+        for (int i=lowerindex; i<=higherindex; i++)
+        {
+            tempMergeArr[i] = array[i]; 
+        }
+        int i = lowerindex;
+        int j = middle+1;
+        int k = lowerindex;
+        while(i<=middle && j<=higherindex)
+        {
+            if(tempMergeArr[i] <= tempMergeArr[j])
+            {
+                array[k] = tempMergeArr[i];
+                i++;
+            }
+            else
+            {
+                array[k] = tempMergeArr[j];
+                j++;
+            }
+            k++;
+        }
+        while(i<=middle)
+        {
+            array[k] = tempMergeArr[i];
+            k++;
+            i++;
+        }
+    }
+}
