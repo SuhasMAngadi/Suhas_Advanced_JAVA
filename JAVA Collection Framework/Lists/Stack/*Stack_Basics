@@ -1,0 +1,24 @@
+- The Java collections framework has a class named Stack that provides the functionality of the stack data structure.
+- It is based on Last-In-First-Out (LIFO).
+- The Stack class extends the Vector class.
+- The stack data structure has the two most important operations that are push and pop.
+  The push operation inserts an element into the stack and pop operation removes an element from the top of the stack.
+  - When we push an element into the stack the top is increased by 1
+  - When we pop an element from the stack the value of top is decreased by 1
+ 
+-----------------------
+Creating a stack/Constructor:  Stack<type> stk = new Stack<>();  
+
+-----------------------
+Stack push/pop implementation: Checkout image 4 in 'images' folder of this repo.
+
+-----------------------
+Top Values:
+
+-1  : Stack is empty
+0   : Stack has one element
+N-1 : Stack is full
+N   : Stack overflow
+
+
+
