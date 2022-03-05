@@ -1,0 +1,63 @@
+METHODS IN HASHMAP:
+
+put(K key,V value) -	Inserts an entry in the map.
+
+putAll(Map map) -	Inserts a specified map in the map.
+
+putIfAbsent(K key, V value) -	Inserts the entry only when the key is not present.
+
+remove(K key) -	Deletes the entry for the specified key.
+
+remove(K key,V value) -	Deletes the entry for the specified key and value.
+
+clear() -	Removes all the mappings from the map.
+
+isEmpty() -	Returns true if the map has no key-value mappings.
+
+size() -	Returns the number of key-value mappings.
+
+keySet() -	Returns a set of keys in a hashmap.
+
+values() -	Returns a set of values in a hashmap.
+
+entrySet() -	Returns a set of entries(K, V) in a hashmap.
+
+get(K key) -	Returns the value associated with the given key.
+
+replace(K key, V value) -	Replaces the specified key with the specified value.
+
+replace(K key,V oldvalue,V newvalue) -	Replaces the old value with a new value for the specified key.
+
+containsKey(K key) -	Returns true if the specified key exists in the hashmap.
+
+containsValue(V value) -	Returns true if the specified value exists in the hashmap.
+
+hashCode() -	Returns the memory address of the object in integer form
+
+equals(Object O) -	Compares the specified object with the map and returns true if same.
+
+clone() -	Returns a shallow copy of the hashmap instance.
+
+getOrDefault(K key, V defaultValue) 
+-	Returns the value to which the given key is mapped or returns the default value if the key is not mapped.
+
+void forEach(BiConsumer<? super K,? super V> action)
+-	It will execute the given action for all the entries until they are all processed or throw an exception.
+
+V merge(K key, V value, BiFunction<? super V,? super V,? extends V> remappingFunction) 
+- If the specified key is not mapped to any value or if the key is null, then map it with the given value.
+
+void replaceAll(BiFunction<? super K,? super V,? extends V> function)
+- It will replace each entry value with the result of the function after it has been processed. 
+
+V compute(K key, BiFunction<? super K,? super V,? extends V> remappingFunction)	
+- Computes the mapping for- the specified key and its current mapped value. Returns null if there is no current mapping.
+
+V computeIfAbsent(K key, Function<? super K,? extends V> mappingFunction)
+- Computes the value using the given mapping function if the specified key is not already associated
+with a value (or is mapped to null) and enters it into this map unless null.
+
+V computeIfPresent(K key, BiFunction<? super K,? super V,? extends V> remappingFunction)
+- Computes a new mapping given the key and its current mapped value if the value for the specified key is present and non-null.
+
+
