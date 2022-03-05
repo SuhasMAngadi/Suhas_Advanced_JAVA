@@ -4,6 +4,8 @@
 - Java LinkedList class is non synchronized.
 - In Java LinkedList class, manipulation is fast because no shifting needs to occur.
 - Java LinkedList class can be used as a list, stack or queue.
+- Best approach for inserting and deleting elements in between.
+- Null insertion is possible
 
 ------------------------
 Each element in a linked list is known as a node. It consists of 3 fields:
@@ -13,6 +15,17 @@ Next - stores an address of the next element in the list. It is null for the las
 Data - stores the actual data
 
 -------------------------
-Working of a Java LinkedList: Checkout the 3rd image in 'images' folder for LinkedList implementation
+* Working of a Java LinkedList: Checkout the 3rd image in 'images' folder for LinkedList implementation (IMPORTANT)
 
 -------------------------
+Declaration: LinkedList<Type> linkedList = new LinkedList<>();
+
+Constructors of Java LinkedList:
+
+1. LinkedList() - It is used to construct an empty list.
+2. LinkedList(Collection c) - It is used to construct a list containing the elements of the specified collection,
+   in the order, they are returned by the collection's iterator.
+   
+-------------------------
+
+
