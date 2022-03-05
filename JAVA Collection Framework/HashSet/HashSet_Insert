@@ -1,0 +1,33 @@
+Inserting Elements to HashSet:
+
+1. add() - inserts the specified element to the set
+2. addAll() - inserts all the elements of the specified collection to the set
+
+-----------------------
+Example:
+
+import java.util.HashSet;
+
+class Main {
+    public static void main(String[] args) {
+        HashSet<Integer> evenNumber = new HashSet<>();
+
+        // Using add() method
+        evenNumber.add(2);
+        evenNumber.add(4);
+        evenNumber.add(6);
+        System.out.println("HashSet: " + evenNumber);
+
+        HashSet<Integer> numbers = new HashSet<>();
+        
+        // Using addAll() method
+        numbers.addAll(evenNumber);
+        numbers.add(5);
+        System.out.println("New HashSet: " + numbers);
+    }
+}
+
+o/p:
+HashSet: [2, 4, 6]
+New HashSet: [2, 4, 5, 6]
+
