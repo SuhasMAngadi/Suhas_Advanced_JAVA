@@ -8,6 +8,8 @@
 
 3. Working of a Java LinkedList:
 
+<img width="762" alt="LinkedList_Working" src="https://user-images.githubusercontent.com/98903088/156892238-043e74e8-9cab-4ac9-9eba-f0b838fb78a5.png">
+
 
 
 
