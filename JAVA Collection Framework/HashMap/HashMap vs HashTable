@@ -1,0 +1,17 @@
+HashMap:
+
+1. No method is synchronized.	
+2. Multiple threads can operate simultaneously and hence hashmap’s object is not thread-safe.
+3. Threads are not required to wait and hence relatively performance is high.
+4. Null is allowed for both key and value.
+5. It is introduced in the 1.2 version.	
+6. It is non-legacy.
+
+HashTable:
+
+1. Every method is synchronized.
+2. At a time only one thread is allowed to operate the Hashtable’s object. Hence it is thread-safe.
+3. It increases the waiting time of the thread and hence performance is low.
+4. Null is not allowed for both key and value. Otherwise, we will get a null pointer exception.
+5. It is introduced in the 1.0 version.
+6. It is a legacy.
