@@ -1,0 +1,61 @@
+Accessing HashMap Elements
+
+---------
+Example 1: get() method takes the key as its argument and returns the corresponding value associated with the key.
+
+
+import java.util.HashMap;
+
+class Main {
+  public static void main(String[] args) {
+
+    HashMap<Integer, String> languages = new HashMap<>();
+    languages.put(1, "Java");
+    languages.put(2, "Python");
+    languages.put(3, "JavaScript");
+    System.out.println("HashMap: " + languages);
+
+    // get() method to get value
+    String value = languages.get(1);
+    System.out.println("Value at index 1: " + value);
+  }
+}
+
+o/p:
+HashMap: {1=Java, 2=Python, 3=JavaScript}
+Value at index 1: Java
+
+--------
+Example 2: We can also access the keys, values, and key/value pairs of the hashmap as set views using keySet(), values(), and entrySet() methods.
+
+import java.util.HashMap;
+
+class Main {
+  public static void main(String[] args) {
+    HashMap<Integer, String> languages = new HashMap<>();
+
+    languages.put(1, "Java");
+    languages.put(2, "Python");
+    languages.put(3, "JavaScript");
+    System.out.println("HashMap: " + languages);
+
+    // return set view of keys
+    // using keySet()
+    System.out.println("Keys: " + languages.keySet());
+
+    // return set view of values
+    // using values()
+    System.out.println("Values: " + languages.values());
+
+    // return set view of key/value pairs
+    // using entrySet()
+    System.out.println("Key/Value mappings: " + languages.entrySet());
+  }
+}
+
+o/p:
+HashMap: {1=Java, 2=Python, 3=JavaScript}
+Keys: [1, 2, 3]
+Values: [Java, Python, JavaScript]
+Key/Value mappings: [1=Java, 2=Python, 3=JavaScript]
+
