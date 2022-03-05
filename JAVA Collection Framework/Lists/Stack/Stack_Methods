@@ -1,0 +1,58 @@
+The Java Stack class provides mainly five methods to perform operations:
+
+1. empty() -	This method checks if the stack is empty or not (returns a boolean).
+
+2. push(E item) - This method pushes (insert) an element onto the top of the stack.
+
+3. pop() - This method removes an element from the top of the stack and returns the same element as the value of that function.
+
+4. peek() - This method looks at the top element of the stack without removing it.
+
+5. search(Object o) - This method searches the specified object FROM TOP OF STACK and returns the position of the object (returns an integer).
+
+------------------------------
+Example:
+
+import java.util.Stack;  
+public class Main  
+{  
+public static void main(String[] args)   
+{  
+ 
+Stack<Integer> stk= new Stack<>();  
+ 
+boolean result = stk.empty();  
+System.out.println("Is the stack empty? " + result);  //No elements are pushed yet
+
+stk.push(78);   // pushing elements into stack  
+stk.push(113);  
+stk.push(90);  
+stk.push(120);
+System.out.println("Elements in Stack: " + stk);  
+
+System.out.println("Top element before pop: " +stk.peek());     // look at the top element 
+
+int position = stk.search(120);
+System.out.println("Position of 120: " + position);  //search for an element (position will be printed from top of the stack)
+
+stk.pop();      //popping elements out of stack
+stk.pop();
+
+System.out.println("Elements in Stack: " + stk);
+
+System.out.println("Top element after pop: " +stk.peek());  
+
+}  
+}  
+
+o/p:
+Is the stack empty? true
+Elements in Stack: [78, 113, 90, 120]
+Top element before pop: 120
+Position of 120: 1
+Elements in Stack: [78, 113]
+Top element after pop: 113
+
+-----------------------------------
+
+Other method implementations:  https://www.javatpoint.com/java-stack
