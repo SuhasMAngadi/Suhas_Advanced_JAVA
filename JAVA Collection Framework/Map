@@ -1,0 +1,67 @@
+ - In Java, elements of Map are stored in key/value pairs.
+ 
+ - Both keys and values are objects and each key-value pair is called as entry. So Map is called as collection of entry objects.
+ 
+ - A map cannot contain duplicate keys, but values can be duplicate. And, each key is associated with a single value.
+ 
+ - Note: The Map interface maintains 3 different sets:
+      1. the set of keys
+      2. the set of values
+      3. the set of key/value associations (mapping).
+      
+      Hence we can access keys, values, and associations individually.
+      
+--------------------------------
+Classes that implement Map are:
+
+1. HashMap
+2. EnumMap
+3. LinkedHashMap
+4. WeakHashMap
+5. TreeMap
+
+---------------------------------
+Methods of Map:
+
+1. put(K, V) - Inserts the association of a key K and a value V into the map. If the key is already present,
+               the new value replaces the old value and returns old value. But if Key is unique then it returns null.
+               
+2. putAll() - Inserts all the entries from the specified map to this map.
+    
+3. putIfAbsent(K, V) - Inserts the association if the key K is not already associated with the value V.
+
+4. get(K) - Returns the value associated with the specified key K. If the key is not found, it returns null.
+
+5. getOrDefault(K, defaultValue) - Returns the value associated with the specified key K. If the key is not found, it returns the defaultValue.
+
+6. containsKey(K) - Checks if the specified key K is present in the map or not.
+
+7. containsValue(V) - Checks if the specified value V is present in the map or not.
+
+8. replace(K, V) - Replace the value of the key K with the new specified value V.
+
+9. replace(K, oldValue, newValue) - Replaces the value of the key K with the new value newValue only if the key K is associated with the value oldValue.
+
+10. remove(K) - Removes the entry from the map represented by the key K.
+
+11. remove(K, V) - Removes the entry from the map that has key K associated with value V.
+
+12. keySet() - Returns a set of all the keys present in a map.
+
+13. values() - Returns a set of all the values present in a map.
+
+14. entrySet() - Returns a set of all the key/value mapping present in a map.
+
+15. size() - It's used to return the number of key-value mappings in this map.
+
+16. isEmpty() - used to check is given Map is empty or not.
+
+17. clear() - used to clear and remove all of the elements or mappings from a specified Map collection.
+
+
+
+
+
+
+
+
