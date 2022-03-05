@@ -1,4 +1,5 @@
 Java Set:
+
 - Set is child interface of collections
 - used to represent group of individual objects as single entity
 - Duplication is NOT allowed
