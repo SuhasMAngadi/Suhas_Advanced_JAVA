@@ -1,2 +1,34 @@
 Java Set:
+- Set is child interface of collections
+- used to represent group of individual objects as single entity
+- Duplication is NOT allowed
+- insertion order is not preserved
+- Doesn't contain any new methods. we use collections interface methods only
 
+-----------------------------------------------------------
+HashSet: The HashSet class of the Java Collections framework provides the functionalities of the hash table data structure.
+
+- HashSet stores the elements by using a mechanism called hashing.
+- HashSet contains unique elements only, no duplicates.
+- HashSet allows null value.
+- HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+- HashSet is the best approach for search operations.
+- The initial default capacity of HashSet is 16, and the load factor is 0.75.
+
+------------------------------------------------------------
+Difference between List and Set:
+A list can contain duplicate elements whereas Set contains unique elements only.
+
+------------------------------------------------------------
+Syntax: HashSet h = new HashSet();
+
+Constructors of Java HashSet class:
+
+1)	HashSet() -	It is used to construct a default HashSet.
+2)	HashSet(int capacity)	- It is used to initialize the capacity of the hash set to the given integer value capacity.
+    The capacity grows automatically as elements are added to the HashSet.
+3)	HashSet(int capacity, float loadFactor)	- It is used to initialize the capacity of the hash set to the given 
+    integer value capacity and the specified load factor.
+4)	HashSet(Collection<? extends E> c)	It is used to initialize the hash set by using the elements of the collection c.
+
+------------------------------------------------------------
