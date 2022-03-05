@@ -1,0 +1,16 @@
+LinkedList	
+
+- Implements List, Queue, and Deque interfaces.	
+- Stores 3 values (previous address, data, and next address) in a single position.	
+- Provides the doubly-linked list implementation.	
+- Whenever an element is added, prev and next address are changed.	
+- To access an element, we need to iterate from the beginning to the element.	
+
+
+ArrayList
+
+- Implements List interface.
+- Stores a single value in a single position.
+- Provides a resizable array implementation.
+- Whenever an element is added, all elements after that position are shifted.
+- Can randomly access elements using indexes.
