@@ -8,6 +8,8 @@ The HashMap class of the Java collections framework provides the functionality o
 
 - The initial default capacity of Java HashMap class is 16 with a load factor of 0.75. 
 
+- It also implements Cloneable and Serializable interface.
+
 ------------------------------------------------------
 Hash Table:
 The Hash table data structure stores elements in key-value pairs where
