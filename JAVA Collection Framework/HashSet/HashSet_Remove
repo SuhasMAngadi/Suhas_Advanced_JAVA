@@ -1,0 +1,32 @@
+Removing HashSet Elements:
+
+1. remove() - removes the specified element from the set
+2. removeAll() - removes all the elements from the set
+
+----------
+Example:
+
+import java.util.HashSet;
+
+class Main {
+    public static void main(String[] args) {
+        HashSet<Integer> numbers = new HashSet<>();
+        numbers.add(2);
+        numbers.add(5);
+        numbers.add(6);
+        System.out.println("HashSet: " + numbers);
+
+        // Using remove() method
+        numbers.remove(5);
+        System.out.println(numbers);
+        
+        // Using removeAll() method
+        numbers.removeAll(numbers);
+        System.out.println(numbers);
+    }
+}
+
+o/p:
+HashSet: [2, 5, 6]
+[2, 6]
+[]
