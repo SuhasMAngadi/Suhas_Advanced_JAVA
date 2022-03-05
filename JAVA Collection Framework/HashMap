@@ -1,5 +1,13 @@
 The HashMap class of the Java collections framework provides the functionality of the hash table data structure.
 
+- Duplicate keys are not allowed, but duplicate values are allowed.
+
+- key can be null only once and value can be null any number of times.
+
+- Java HashMap maintains no order.
+
+- The initial default capacity of Java HashMap class is 16 with a load factor of 0.75. 
+
 ------------------------------------------------------
 Hash Table:
 The Hash table data structure stores elements in key-value pairs where
@@ -10,3 +18,47 @@ Value - data that are associated with keys.
 In a hash table, a new index is processed using the keys. And, the element corresponding to that key is stored in the index. This process is called hashing.
 
 ------------------------------------------------------
+HashMap class Parameters
+Let's see the Parameters for java.util.HashMap class.
+
+K: It is the type of keys maintained by this map.
+V: It is the type of mapped values.
+
+Constructors of Java HashMap class:
+
+HashMap() -	It is used to construct a default HashMap.
+HashMap(Map m)	 - It is used to initialize the hash map by using the elements of the given Map object m.
+HashMap(int capacity)	 - It is used to initializes the capacity of the hash map to the given integer value, capacity.
+HashMap(int capacity, float loadFactor)	 - It is used to initialize both the capacity and load factor of the hash map by using its arguments.
+
+-------------------------------------------------------
+Create HashMap object in Java:
+
+HashMap object syntax:  HashMap<K, V> numbers = new HashMap<>();
+Example: HashMap<String, Integer> numbers = new HashMap<>();
+
+--------------------------------------------------------
+Example 1: Create HashMap in Java
+
+import java.util.HashMap;
+
+class Main {
+  public static void main(String[] args) {
+
+    // create a hashmap
+    HashMap<String, Integer> m = new HashMap<>();
+
+    // add elements to hashmap
+    m.put("Suhas", 1);
+    m.put("Potato", 2);
+    m.put("Tomato", 3);
+    System.out.println("HashMap: " + m);
+  }
+}
+
+o/p:
+HashMap: {Suhas=1, Potato=2, Tomato=3}
+
+
+
+
