@@ -1,0 +1,59 @@
+Adding Elements to an ArrayList
+
+---------------------
+Example 1: To add a single element to the arraylist, we use the add() method of the ArrayList class.
+
+import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args){
+    // create ArrayList
+    ArrayList<String> languages = new ArrayList<>();
+
+    // add() method without the index parameter
+    languages.add("Java");
+    languages.add("C");
+    languages.add("Python");
+    System.out.println("ArrayList: " + languages);
+  }
+}
+
+o/p:
+ArrayList: [Java, C, Python]
+
+---------------------
+Example 2: We can also pass an index number as an additional parameter to the add() method to add an element at the specified position.
+
+// add JavaScript at index 1
+languages.add(1, "JavaScript");
+
+// add C++ at index 3
+languages.add(3, "C++");
+
+----------------------
+Example 3: We can also add all elements of a collection (set, map) to an arraylist using the addAll() method.
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+class Main {
+  public static void main(String[] args) {
+
+    // create a set
+    HashSet<String> vowels = new HashSet<>();
+    vowels.add("a");
+    vowels.add("e");
+    vowels.add("i");
+
+    // create an arraylist
+    ArrayList<String> alphabets = new ArrayList<>();
+
+    // add all elements of set to arraylist
+    alphabets.addAll(vowels);
+    System.out.println("ArrayList: " + alphabets);
+  }
+}
+
+o/p:
+ArrayList: [a, e, i]
+
