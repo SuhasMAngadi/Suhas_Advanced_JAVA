@@ -1,0 +1,335 @@
+--------------------------------------------------------------------------------------
+Example 1: Its not possible to have try block only (i.e without catch or finally)
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            int a = 100, b=2;
+            System.out.println(a/b); 
+        }
+    }    
+}
+
+o/p:
+Main.java:5: error: 'try' without 'catch', 'finally' or resource declarations
+        try
+        ^
+1 error
+
+--------------------------------------------------------------------------------------
+Example 2: Its not possible to have catch block only (i.e without try)
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }    
+}
+
+o/p:
+Main.java:5: error: 'catch' without 'try'
+        catch (Exception e)
+        ^
+1 error
+
+--------------------------------------------------------------------------------------
+Example 3: Its not possible to have finally block only (i.e without try or try-catch)
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        finally 
+        {
+            System.out.println("a");
+        }
+    }    
+}
+
+o/p:
+Main.java:5: error: 'finally' without 'try'
+        finally 
+        ^
+1 error
+
+--------------------------------------------------------------------------------------
+Example 4: Its possible to have multiple catch block with a try block
+           But cannot have same class type for multiple catch blocks
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            System.out.println("a");
+        }
+        catch(Exception e)
+        {
+            System.out.println("In first catch block");
+        }
+        catch(Exception e)
+        {
+            System.out.println("In second catch block");
+        }
+    }    
+}
+
+o/p:
+Main.java:13: error: exception Exception has already been caught
+        catch(Exception e)
+        ^
+1 error
+
+--------------------------------------------------------------------------------------
+Example 5: Its possible to have multiple catch block with a try block
+           But different class type should be specified for multiple catch blocks
+           
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            System.out.println("a");
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("In first catch block");
+        }
+        catch(ArrayIndexOutOfBoundsException a)
+        {
+            System.out.println("In second catch block");
+        }
+    }    
+}
+
+o/p:
+a
+
+--------------------------------------------------------------------------------------
+Example 6: Its possible to have multiple catch block with a try block
+           But class type of first catch should be child of the class type of second catch
+           
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            System.out.println("a");
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("In first catch block");
+        }
+        catch(Exception a)
+        {
+            System.out.println("In second catch block");    // ArithmeticException is child class of Exception class
+        }
+    }    
+}
+
+o/p:
+a
+
+--------------------------------------------------------------------------------------
+Example 7: Its possible to have multiple catch block with a try block
+           But class type of first catch cannot be parent of the class type of second catch
+           
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            System.out.println("a");
+        }
+        catch(Exception e)
+        {
+            System.out.println("In first catch block");
+        }
+        catch(ArithmeticException a)
+        {
+            System.out.println("In second catch block");
+        }
+    }    
+}
+
+o/p:
+Main.java:13: error: exception ArithmeticException has already been caught
+        catch(ArithmeticException a)
+        ^
+1 error
+
+--------------------------------------------------------------------------------------
+Example 8: Combination try - finally - catch is NOT possible
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            System.out.println("a");
+        }
+        finally
+        {
+            System.out.println("In finally block");
+        }
+        catch(ArithmeticException a)
+        {
+            System.out.println("In catch block");
+        }
+    }    
+}
+
+o/p:
+Main.java:13: error: 'catch' without 'try'
+        catch(ArithmeticException a)
+        ^
+1 error
+
+--------------------------------------------------------------------------------------
+Example 9: It's possible to have a try-catch inside a try block
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            try
+            {
+                System.out.println("In nested try");
+            }
+            catch(Exception e)
+            {
+               System.out.println(e); 
+            }
+        }
+        catch(ArithmeticException a)
+        {
+            System.out.println("In catch block");
+        }
+    }    
+}
+
+o/p:
+In nested try
+
+--------------------------------------------------------------------------------------
+Example 10: It's possible to have a try-catch inside a catch block
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            System.out.println("inside try");
+            int a = 10, b = 0, c;
+            c = a/b;
+        }
+        catch(ArithmeticException a)
+        {
+            try
+            {
+                System.out.println("inside nested try");
+                int x = 10, y = 0, z;
+                z = x/y;
+            }
+            catch(Exception e)
+            {
+                System.out.println("inside nested catch");
+            }
+        }
+    }    
+}
+
+o/p:
+inside try
+inside nested try
+inside nested catch
+
+--------------------------------------------------------------------------------------
+Example 11: It's possible to have a try-catch inside a finally block
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            System.out.println("inside try");
+            int a = 10, b = 0, c;
+            c = a/b;
+        }
+        catch(ArithmeticException a)
+        {
+            System.out.println("inside catch");
+        }
+        finally
+        {
+            try
+            {
+                System.out.println("inside try within finally block");
+                int x = 10, y = 0, z;
+                z = x/y;
+            }
+            catch(Exception e)
+            {
+                System.out.println("inside catch within finally block");
+            }
+        }
+    }    
+}
+
+o/p:
+inside try
+inside catch
+inside try within finally block
+inside catch within finally block
+
+--------------------------------------------------------------------------------------
+Example 12: It's NOT possible to have any statements between try and catch block
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            System.out.println("inside try");
+            int a = 10, b = 0, c;
+            c = a/b;
+        }
+        System.out.println("Statement");
+        catch(ArithmeticException a)
+        {
+            System.out.println("inside catch");
+        }
+    }    
+}
+
+o/p:
+Main.java:5: error: 'try' without 'catch', 'finally' or resource declarations
+        try
+        ^
+Main.java:12: error: 'catch' without 'try'
+        catch(ArithmeticException a)
+        ^
+2 errors
+
+--------------------------------------------------------------------------------------
+
+
+
+           
