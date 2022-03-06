@@ -1,5 +1,23 @@
 Main difference between String and StringBuffer:
 
 - String is Immutable: Once String is created, we cannot change value of that String object.
-- String is Mutable: Once StringBuffer is created, we can change value of that StringBuffer object.
+- String is Mutable/Modifiable: Once StringBuffer is created, we can change value of that StringBuffer object.
 
+So, Java StringBuffer class is used to create mutable (modifiable) String objects and the length is also growable.
+
+------------------------------------------------------------------------------------------------------
+Declaration: StringBuffer sb = new StringBuffer();
+
+StringBuffer Constructors:
+
+1. StringBuffer() - It creates an empty String buffer with the initial capacity of 16.
+
+2. StringBuffer(String str) - It creates a String buffer with the specified string.
+                              The capacity is 16 plus the length of the string argument
+
+3. StringBuffer(int capacity) - It creates an empty String buffer with the specified capacity as length.
+
+4. StringBuffer(CharSequence seq) - Creates a StringBuffer with the characters in the specified CharSequence.
+                                    The capacity is 16 plus the length of the characters in the argument
+
+-------------------------------------------------------------------------------------------------------
