@@ -8,19 +8,54 @@ The Exceptions are of two types:
 
 - A runtime exception happens due to a programming error. They are also known as unchecked exceptions.
 - These exceptions are not checked at compile-time(compiler ignores) but checked at run-time. 
-Examples:
+i.e
 * Improper use of an API - IllegalArgumentException
 * Null pointer access (missing the initialization of a variable) - NullPointerException
 * Out-of-bounds array access - ArrayIndexOutOfBoundsException
-* Dividing a number by 0 - ArithmeticException
+* Dividing a number by 0 - ArithmeticException etc..
 
+
+Example: RuntimeException
+
+public class Main
+{
+    public static void main(String[] args) {
+        int a = 100, b=0;
+        System.out.println(a/b);    //this will NOT throw an exception when program is compiled, but will throw an exception during runtime
+    }
+}
+
+o/p:
+Exception in thread "main" 
+java.lang.ArithmeticException: / by zero
+	at Main.main(Main.java:7)
+
+---------------------------
 
 2. IOException (compile-time exceptions)(checked exceptions)
 
 - An IOException is also known as a checked exception.
 - They are checked by the compiler at the compile-time and the programmer is prompted to handle these exceptions.
-Examples:
+i.e
 * Trying to open a file that doesn’t exist results in FileNotFoundException
-* Trying to read past the end of a file
+* Trying to read past the end of a file etc..
+
+
+Example: Compile-time Exception
+
+import java.io.FileInputStream;
+
+public class Main
+{
+    public static void main(String[] args) {
+        FileInputStream fis = new FileInputStream("d:/abc.txt");  //this will throw an exception when program is compiled
+    }
+}
+
+o/p: 
+Main.java:7: error: unreported exception FileNotFoundException; must be caught or declared to be thrown
+        FileInputStream fis = new FileInputStream("d:/abc.txt");
+                              ^
+1 error
 
 ------------------------------------------------------------
