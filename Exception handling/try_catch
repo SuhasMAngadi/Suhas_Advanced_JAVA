@@ -1,17 +1,79 @@
 The try...catch block in Java is used to handle exceptions and prevents the abnormal termination of the program.
 
-----------------------------------------
+-------------------------------------------------------------
 Syntax:
 
+----------------------------------------
 try{
   // code
 }
 catch(Exception Classname refVariable) {
-  // code
+  // Handling code
 }
 ----------------------------------------
-Lets take a run time exception scenario
+
+OR
+
+----------------------------------------
+try{
+  // code
+}
+catch(Exception refVariable) {      /* If you don't know the exact name of ExceptionClass to specify as in above syntax
+  // Handling code                     it's okay just to specify as Exception, compiler will automatically understand 
+}                                      which ExceptionClass to be used for specific scenario */
+-----------------------------------------
+
+--------------------------------------------------------------
+
+- The try block includes the code that might generate an exception.
+- The catch block includes the code that is executed when there occurs an exception inside the try block.
+- The catch block is only executed if there exists an exception inside the try block.
+- In Java, we can use a try block without a catch block. However, we cannot use a catch block without a try block.
+
+--------------------------------------------------------------
+
+Example 1: Lets take a run time exception scenario 
+
+public class Main
+{
+    public static void main(String[] args) {
+        int a = 100, b=0;
+        System.out.println(a/b); 
+        System.out.println("Print statement to check if program terminated abnormally");
+        System.out.println("Since exception is NOT handled here, program will NOT print these statements & terminate abnormally");
+    }    
+}
+
+o/p:
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at Main.main(Main.java:5)
 
 
+---------------------------------------------------------------
+Example 2: Exception handling using try catch block
+  
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+        int a = 100, b=0;
+        System.out.println(a/b); //Exception risk element is placed in try block
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println(e); //Handling code
+        }
+        System.out.println("Print statement to check if program terminated abnormally");
+        System.out.println("Since exception is handled here, program will print these statements & not terminate abnormally");
+    }
+}
+
+o/p:
+java.lang.ArithmeticException: / by zero
+Print statement to check if program terminated abnormally
+Since exception is handled here, program will print these statements & not terminate abnormally
+
+---------------------------------------------------------------
 
 
