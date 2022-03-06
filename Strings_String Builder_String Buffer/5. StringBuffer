@@ -3,7 +3,7 @@ Main difference between String and StringBuffer:
 - String is Immutable: Once String is created, we cannot change value of that String object.
 - String is Mutable/Modifiable: Once StringBuffer is created, we can change value of that StringBuffer object.
 
-So, Java StringBuffer class is used to create mutable (modifiable) String objects and the length is also growable.
+So, Java StringBuffer class is used to create mutable (modifiable) String objects, length is growable, methods are synchronized & thread safe.
 
 ------------------------------------------------------------------------------------------------------
 Declaration: StringBuffer sb = new StringBuffer();
