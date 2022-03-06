@@ -21,3 +21,5 @@ StringBuffer Constructors:
                                     The capacity is 16 plus the length of the characters in the argument
 
 -------------------------------------------------------------------------------------------------------
+StringBuffer methods:  https://www.tutorialcup.com/java/stringbuffer-java.htm
+
