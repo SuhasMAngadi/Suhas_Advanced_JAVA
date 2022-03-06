@@ -23,3 +23,33 @@ StringBuffer Constructors:
 -------------------------------------------------------------------------------------------------------
 StringBuffer methods:  https://www.tutorialcup.com/java/stringbuffer-java.htm
 
+-------------------------------------------------------------------------------------------------------
+String comparision vs StringBuffer comparision:
+
+import java.util.*;
+class Main {
+  public static void main(String[] args) 
+  {
+      StringBuffer sb1 = new StringBuffer("suhas");
+      StringBuffer sb2 = new StringBuffer("suhas");
+      System.out.println(sb1==sb2);         //reference comparision
+      System.out.println(sb1.equals(sb2));  /* The equals() method of StringBuffer is not overridden from Object but implements Comparable,
+                                               so it will compare reference equality i.e. the same as using == */
+      
+      System.out.println();
+      
+      String s1 = new String("suhas");
+      String s2 = new String("suhas");
+      System.out.println(s1==s2);          //reference comparision
+      System.out.println(s1.equals(s2));   //content comparision
+  }
+}
+
+o/p:
+false
+false
+
+false
+true
+
+-------------------------------------------------------------------------------------------------------
