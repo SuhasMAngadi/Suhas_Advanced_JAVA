@@ -1,0 +1,17 @@
+The try...catch block in Java is used to handle exceptions and prevents the abnormal termination of the program.
+
+----------------------------------------
+Syntax:
+
+try{
+  // code
+}
+catch(Exception Classname refVariable) {
+  // code
+}
+----------------------------------------
+Lets take a run time exception scenario
+
+
+
+
