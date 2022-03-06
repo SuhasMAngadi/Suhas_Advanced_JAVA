@@ -23,6 +23,8 @@
 <img width="1428" alt="Exception_Class_Hierarchy" src="https://user-images.githubusercontent.com/98903088/156911251-1ff4d568-6150-4416-959c-b970d63254ed.png">
 
 
+6. throw vs throws keyword:
+
 
 
 
