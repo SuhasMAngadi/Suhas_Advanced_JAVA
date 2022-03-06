@@ -25,6 +25,7 @@
 
 6. throw vs throws keyword:
 
+<img width="1390" alt="throw vs throws" src="https://user-images.githubusercontent.com/98903088/156924982-4f8e30cc-c90f-4077-b61b-0d9cc8eae399.png">
 
 
 
