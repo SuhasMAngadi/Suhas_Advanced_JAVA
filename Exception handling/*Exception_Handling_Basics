@@ -1,0 +1,30 @@
+Exception: An exception is an unexpected event that occurs during program execution.
+It affects the flow of the program instructions which can cause the program to terminate abnormally.
+
+-----------------------------------------------------
+Exception hierarchy:
+
+- Throwable class is the root class in the hierarchy.
+
+
+               ------------> Error
+               |
+               |
+Throwable -----|                         ----> Run time exception (unchecked exceptions)
+               |                         |
+               ------------> Exception --|
+                                         |
+                                         ----> IO exception (checked exception)
+                                       
+ 
+Error: 
+ - Errors represent irrecoverable conditions such as Java virtual machine (JVM) running out of memory,
+ memory leaks, stack overflow errors, library incompatibility, infinite recursion, etc.
+ - Errors are usually beyond the control of the programmer and we should not try to handle errors.
+ 
+Exception:
+ - Exceptions can be caught and handled by the program.
+ - When an exception occurs within a method, it creates an object. This object is called the exception object.
+ 
+-----------------------------------------------------
+
