@@ -1,0 +1,136 @@
+
+- The finally block executes whether exception rise or not and whether exception handled or not.
+- Therefore, it contains all the necessary statements that need to be printed regardless of the exception occurs or not.
+- finally block in Java can be used to put "cleanup" code such as closing a file, closing connection, etc.
+- finally can be used with just try or try-catch blocks
+
+--------------------------------------
+Rules:
+
+* Multiple finally blocks cannot be used
+* Finally block will be executed even if try block contains control transfer statements (return, break, continue)
+* Possibilites that disturbs the execution of finally block:
+  - using System.exit() method
+  - Fatal errors
+  - Unhandles Exception in finally block itself
+  - Death of thread
+  
+
+--------------------------------------
+Example 1: - With try, catch and finally block
+           - Finally block functionality when Exception doesn't occur,
+           - Here only try block and finally block will be executed as there will be no exception
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            int a = 100, b=2;
+            System.out.println(a/b); 
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+            System.out.println();
+        }
+        finally
+        {
+            System.out.println("Inside finally block");
+        }
+    }    
+}
+
+o/p:
+50
+Inside finally block
+
+--------------------------------------
+Example 2: - With try, catch and finally block
+           - Finally block functionality when Exception occurs,
+           - Here try block, catch block and finally block will be executed as there will be an exception
+           
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            int a = 100, b=0;
+            System.out.println(a/b); 
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+            System.out.println();
+        }
+        finally
+        {
+            System.out.println("Inside finally block");
+        }
+    }    
+}
+
+o/p:
+java.lang.ArithmeticException: / by zero
+
+Inside finally block
+
+--------------------------------------
+Example 3: - With try and finally block
+           - Finally block functionality when Exception doesn't occur,
+           - Here try block and finally block will be executed as there will be no exception
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            int a = 100, b=2;
+            System.out.println(a/b); 
+        }
+        finally
+        {
+            System.out.println("Inside finally block");
+        }
+    }    
+}
+
+o/p:
+50
+Inside finally block
+
+--------------------------------------
+Example 4: - With try and finally block
+           - Finally block functionality when Exception occurs,
+           - Here try block and finally block will be executed even if there is an exception,
+             program will be abnormally terminated only after executing finally block
+             
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            int a = 100, b=0;
+            System.out.println(a/b); 
+        }
+        finally
+        {
+            System.out.println("Inside finally block");
+        }
+        
+        System.out.println("Abnormal termination check"); 
+        
+        /* Last statement will not be executed as there is an exception and no catch block to 
+        handle it, so inspite of program being abnormally terminated finally block will be executed */
+    }    
+}             
+
+o/p:
+Inside finally block
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at Main.main(Main.java:8)
+
