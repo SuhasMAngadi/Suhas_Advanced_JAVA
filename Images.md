@@ -29,6 +29,6 @@
 
 7. Difference between String, StringBuilder and StringBuffer:
 
-<img width="1440" alt="String vs StringBuilder vs StringBuffer" src="https://user-images.githubusercontent.com/98903088/156932997-66379769-90ae-4ec8-b834-ad0930d47a4c.png">
+
 
 
