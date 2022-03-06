@@ -37,11 +37,11 @@ class Main {
     String str2 = new String("xyz");
 
 
-    System.out.println(str1 == str2); // false
-
+    System.out.println(str1 == str2);      // false
+    System.out.println(str1.equals(str2)); // True
   }
 }
 
 As you can see from this example, both str1 and str2 have the same content. However, they are not equal because they don't share the same memory.
-
+Since, equals is used for content comparision it will return True.
 
