@@ -1,1 +1,99 @@
+Example 1: Consider a program where exception arises inside the method
+
+import java.util.*;
+class Test
+{
+    public static void main(String[] args)
+    {
+        Test t = new Test();
+        t.divide();
+    }  
+    public void divide()
+    {
+        int a = 10, b = 0, c;
+        c = a/b;
+        System.out.println(c);
+    }
+}
+
+o/p:
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at Test.divide(Test.java:12)
+	at Test.main(Test.java:7)
+  
+-------------------------------------------------------------------------------
+* There are two ways to resolve the exception arised inside a method:
+ 
+ 1. using try-catch inside the method
+ 2. using try-catch inside the main
+ 
+- As soon as an exception is encountered inside a method, the complier will create exception object
+  and look if it's handled in method first and then in main
+- If exception is neither handled in method or main, it will by default print the exception as in example 1.
+
+-------------------------------------------------------------------------------
+Example 2: Exception handing in a method: Using try-catch inside the method
+
+import java.util.*;
+class Test
+{
+    public static void main(String[] args)
+    {
+        Test t = new Test();
+        t.divide();
+        System.out.println("After handling");
+    }  
+    public void divide()
+    {
+        try
+        {
+           int a = 10, b = 0, c;
+            c = a/b;
+            System.out.println(c); 
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}
+
+o/p:
+java.lang.ArithmeticException: / by zero
+After handling
+
+-------------------------------------------------------------------------------
+Example 3: Exception handing in a method: Using try-catch inside the main
+
+import java.util.*;
+class Test
+{
+    public static void main(String[] args)
+    {
+        Test t = new Test();
+        try
+        {
+           t.divide(); 
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+        System.out.println("After handling");
+    }  
+    public void divide()
+    {
+           int a = 10, b = 0, c;
+            c = a/b;
+            System.out.println(c); 
+    }
+}
+
+o/p:
+java.lang.ArithmeticException: / by zero
+After handling
+
+-------------------------------------------------------------------------------
+
+
 
