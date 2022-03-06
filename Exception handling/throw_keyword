@@ -1,3 +1,89 @@
 - The Java throw keyword is used to throw an exception explicitly.
 - We can throw either checked or unchecked exceptions in Java by throw keyword.
 - It is mainly used to throw a custom exception.
+
+-----------------------------------------------------
+Example 1: Throwing User-defined/customized Exception (Important)
+
+import java.util.*;
+
+class YoungerAgeException extends RuntimeException      //user-defined exception class, which extends the pre-defined standard class RuntimeException
+{
+    YoungerAgeException(String message)
+    {
+        super(message);
+    }
+}
+
+class Voting
+{
+    public static void main (String[] args) 
+    {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter your age: ");
+        int age = s.nextInt();
+        
+        if(age<18)
+        {
+            throw new YoungerAgeException("You are not eligible for voting");   //invoking user defined exception using throw keyword
+        }
+        else
+        {
+            System.out.println("You are eligible");
+        }
+    }
+}
+
+o/p:
+
+Enter your age: 
+13
+Exception in thread "main" 
+YoungerAgeException: You are not eligible for voting
+	at Voting.main(Voting.java:21)
+  
+ 
+-----------------------------------------------------
+Example 2: throwing unchecked exception
+
+class Main {
+  public static void divideByZero() {
+    throw new ArithmeticException("Trying to divide by 0");       //ArithmeticException is an unchecked exception
+  }
+
+  public static void main(String[] args) {
+    divideByZero();
+  }
+}
+
+o/p:
+Exception in thread "main" 
+java.lang.ArithmeticException: Trying to divide by 0
+	at Main.divideByZero(Main.java:3)
+	at Main.main(Main.java:7)
+  
+-----------------------------------------------------
+Example 3: throwing checked exception
+
+import java.io.*;
+class Main {
+  public static void findFile() throws IOException {
+    throw new IOException("File not found");
+  }
+
+  public static void main(String[] args) {
+    try 
+    {
+      findFile();
+    } 
+    catch (IOException e)
+    {
+      System.out.println(e.getMessage());
+    }
+  }
+}
+
+o/p:
+File not found
+
+ 
