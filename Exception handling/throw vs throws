@@ -1,0 +1,21 @@
+throw:
+
+* Java throw keyword is used throw an exception explicitly in the code, inside the function or the block of code.
+
+* throw is used within the method.
+
+* We are allowed to throw only one exception at a time i.e. we cannot throw multiple exceptions.
+
+
+throws:
+
+* Java throws keyword is used in the method signature to declare an exception which might be thrown by the function while the execution of the code.
+
+* throws is used with the method signature.
+
+* We can declare multiple exceptions using throws keyword that can be thrown by the method.
+
+----------------------------------------------------------------------------
+Check out differences in detail in 6th image of 'images' folder of this Repo
+
+----------------------------------------------------------------------------
