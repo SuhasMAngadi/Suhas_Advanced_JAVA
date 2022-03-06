@@ -1,0 +1,140 @@
+------------------------------------------------------------------
+Example 1: Sort Numeric Array in Ascending Order
+
+import java.util.Arrays; 
+ 
+public class Main 
+{ 
+public static void main(String[] args) 
+    { 
+        //define an array
+        int[] arr = {52, 45, 32, 64, 12, 87, 78, 98, 23, 7}; 
+        System.out.print("Unsorted array: ");
+        for (int i=0; i<arr.length; i++)
+        {
+            System.out.print(arr[i]+", ");
+        } 
+ 
+        Arrays.sort(arr); 
+        
+        System.out.println();
+        System.out.print("Sorted array: ");
+        for (int i=0; i<arr.length; i++)
+        {
+            System.out.print(arr[i]+", ");
+        }
+    } 
+}
+
+o/p:
+Unsorted array: 52, 45, 32, 64, 12, 87, 78, 98, 23, 7, 
+Sorted array: 7, 12, 23, 32, 45, 52, 64, 78, 87, 98, 
+
+------------------------------------------------------------------
+Example 2: Sort Subarray in Ascending Order
+
+import java.util.*; 
+ 
+public class Main 
+{ 
+public static void main(String[] args) 
+    { 
+        //define an array
+        int[] Arr = {52, 45, 32, 64, 12, 87, 78, 98, 23, 7}; 
+        System.out.print("Unsorted array: ");
+        for (int i=0; i<Arr.length; i++)
+        {
+            System.out.print(Arr[i]+", ");
+        } 
+ 
+        Arrays.sort(Arr,0,5); 
+        
+        System.out.println();
+        System.out.print("Sorted subarray: ");
+        for (int i=0; i<Arr.length; i++)
+        {
+            System.out.print(Arr[i]+", ");
+        }
+    } 
+}
+
+o/p:
+
+Unsorted array: 52, 45, 32, 64, 12, 87, 78, 98, 23, 7, 
+Sorted subarray: 12, 32, 45, 52, 64, 87, 78, 98, 23, 7, 
+
+------------------------------------------------------------------
+Example 3: Sort the Array in Descending Order
+
+import java.util.*; 
+ 
+public class Main 
+{ 
+public static void main(String[] args) 
+    { 
+        Integer[] Arr = {52, 45, 32, 64, 12, 87, 78, 98, 23, 7};    /* Collections.reverseOrder() does not support primitive type.
+                                                                      Hence, you must use “Integer” instead of “int” */
+        System.out.print("Unsorted array: ");
+        for (int i=0; i<Arr.length; i++)
+        {
+            System.out.print(Arr[i]+", ");
+        } 
+ 
+        Arrays.sort(Arr, Collections.reverseOrder()); 
+        
+        System.out.println();
+        System.out.print("Sorted array in descending order: ");
+        for (int i=0; i<Arr.length; i++)
+        {
+            System.out.print(Arr[i]+", ");
+        }
+    } 
+}
+
+o/p:
+Unsorted array: 52, 45, 32, 64, 12, 87, 78, 98, 23, 7, 
+Sorted array in descending order: 98, 87, 78, 64, 52, 45, 32, 23, 12, 7, 
+
+------------------------------------------------------------------
+Example 4: Sort an Array of Strings in Alphabetical Order
+
+import java.util.*; 
+ 
+public class Main 
+{ 
+public static void main(String[] args) 
+    { 
+        
+        String[] str = {"you", "are", "nice", "suhas"}; 
+        System.out.print("Unsorted strings: ");
+        for (int i=0; i<str.length; i++)
+        {
+            System.out.print(str[i]+", ");
+        } 
+        
+        Arrays.sort(str); 
+        
+        System.out.println();
+        System.out.print("Sorted strings in ascending order: ");
+        for (int i=0; i<str.length; i++)
+        {
+            System.out.print(str[i]+", ");
+        }
+        
+        Arrays.sort(str, Collections.reverseOrder()); 
+        
+        System.out.println();
+        System.out.print("Sorted strings in descending order: ");
+        for (int i=0; i<str.length; i++)
+        {
+            System.out.print(str[i]+", ");
+        }
+    } 
+}
+
+o/p:
+Unsorted strings: you, are, nice, suhas, 
+Sorted strings in ascending order: are, nice, suhas, you, 
+Sorted strings in descending order: you, suhas, nice, are, 
+
+------------------------------------------------------------------
