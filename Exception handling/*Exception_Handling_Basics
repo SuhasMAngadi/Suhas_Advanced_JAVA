@@ -24,7 +24,14 @@ Error:
  
 Exception:
  - Exceptions can be caught and handled by the program.
- - When an exception occurs within a method, it creates an object. This object is called the exception object.
+ 
  
 -----------------------------------------------------
+IMPORTANT:
 
+- When an exception occurs within a method, it creates an object. This object is called the exception object.
+- It contains information about the exception such as name, description & state of the program when the exception occurred.
+a. Suppose user doesn't handle this exception, then JVM will directly print the exception and abnormally terminate the program.
+b. But user can manually handle this exception by using methods like try-catch etc..
+
+-----------------------------------------------------
