@@ -10,6 +10,10 @@
 
 <img width="762" alt="LinkedList_Working" src="https://user-images.githubusercontent.com/98903088/156892238-043e74e8-9cab-4ac9-9eba-f0b838fb78a5.png">
 
+4. Exception Class Hierarchy:
+
+<img width="1428" alt="Exception_Class_Hierarchy" src="https://user-images.githubusercontent.com/98903088/156911251-1ff4d568-6150-4416-959c-b970d63254ed.png">
+
 
 
 
