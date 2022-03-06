@@ -1,0 +1,42 @@
+- The Java throws keyword is used to declare an exception
+
+- It gives an information to the programmer that there may occur an exception. 
+  So, it is better for the programmer to provide the exception handling code
+  so that the normal flow of the program can be maintained.
+  
+- throws does NOT handle an exception, we still need to make use of try-catch block 
+  
+- throws keyword can be used only with checked exceptions and not unchecked exceptions
+  - Checked exception only, because: unchecked exception: under our control so we can correct our code.
+  
+-------------------------------------------------------------------------------------------------------  
+Example:
+ 
+import java.io.*;
+class Main {
+  public static void findFile() throws IOException {        // code that may produce IOException
+    
+    File newFile=new File("test.txt");
+    FileInputStream stream=new FileInputStream(newFile);
+  }
+
+  public static void main(String[] args) {
+    try
+    {
+      findFile();
+    } 
+    catch(IOException e)
+    {
+      System.out.println(e);
+    }
+  }
+}
+
+o/p:
+java.io.FileNotFoundException: test.txt (No such file or directory)
+
+
+- When we run this program, if the file test.txt does not exist, FileInputStream throws a FileNotFoundException which extends the IOException class.
+- The findFile() method specifies that an IOException can be thrown. The main() method calls this method and handles the exception if it is thrown.
+
+------------------------------------------------------------------------------------------------------- 
