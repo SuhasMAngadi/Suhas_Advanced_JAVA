@@ -1,4 +1,5 @@
 Main difference between String and StringBuffer:
 
-- String is Immutable: 
+- String is Immutable: Once String is created, we cannot change value of that String object.
+- String is Mutable: Once StringBuffer is created, we can change value of that StringBuffer object.
 
