@@ -64,28 +64,6 @@ java.lang.ArithmeticException: Trying to divide by 0
 	at Main.divideByZero(Main.java:3)
 	at Main.main(Main.java:7)
   
------------------------------------------------------
-Example 3: throwing checked exception
 
-import java.io.*;
-class Main {
-  public static void findFile() throws IOException {
-    throw new IOException("File not found");
-  }
-
-  public static void main(String[] args) {
-    try 
-    {
-      findFile();
-    } 
-    catch (IOException e)
-    {
-      System.out.println(e.getMessage());
-    }
-  }
-}
-
-o/p:
-File not found
 
  
