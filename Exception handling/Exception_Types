@@ -1,0 +1,26 @@
+The Exceptions are of two types: 
+
+1. RuntimeException (unchecked exceptions)
+2. IOException (compile-time exceptions)(checked exceptions)
+
+------------------------------------------------------------
+1. RuntimeException (unchecked exceptions)
+
+- A runtime exception happens due to a programming error. They are also known as unchecked exceptions.
+- These exceptions are not checked at compile-time(compiler ignores) but checked at run-time. 
+Examples:
+* Improper use of an API - IllegalArgumentException
+* Null pointer access (missing the initialization of a variable) - NullPointerException
+* Out-of-bounds array access - ArrayIndexOutOfBoundsException
+* Dividing a number by 0 - ArithmeticException
+
+
+2. IOException (compile-time exceptions)(checked exceptions)
+
+- An IOException is also known as a checked exception.
+- They are checked by the compiler at the compile-time and the programmer is prompted to handle these exceptions.
+Examples:
+* Trying to open a file that doesn’t exist results in FileNotFoundException
+* Trying to read past the end of a file
+
+------------------------------------------------------------
