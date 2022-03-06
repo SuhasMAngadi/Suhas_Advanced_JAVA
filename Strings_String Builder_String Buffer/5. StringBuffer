@@ -1,1 +1,4 @@
+Main difference between String and StringBuffer:
+
+- String is Immutable: 
 
