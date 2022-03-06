@@ -1,0 +1,62 @@
+There are three methods to print the exception occured
+
+1. printStackTrace()
+- prints Name of Exception object
+- prints Description of Exception object
+- prints stack trace of Exception object
+
+2. System.out.println(refVariable) or System.out.println(refVariable.toString())
+- prints Name of Exception object
+- prints Description of Exception object
+- Does NOT print stack trace of Exception object
+
+3. System.out.println(ref variable.getMessage())
+- only prints Description of Exception object
+
+----------------------------------------------
+Example:
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        try
+        {
+            int a = 100, b=0;
+            System.out.println(a/b); 
+        }
+        catch(Exception e)
+        {
+            System.out.println("1. printStackTrace() method:");
+            e.printStackTrace();
+            System.out.println();
+            
+            System.out.println("2. printing exception object directly:");
+            System.out.println(e);
+            System.out.println();
+            
+            System.out.println("3. toString() method:");
+            System.out.println(e.toString());
+            System.out.println();
+            
+            System.out.println("4. getMessage() method:");
+            System.out.println(e.getMessage());
+            System.out.println();
+        }
+        
+    }    
+}
+
+o/p:
+1. printStackTrace() method:
+java.lang.ArithmeticException: / by zero
+	at Main.main(Main.java:8)
+
+2. printing exception object directly:
+java.lang.ArithmeticException: / by zero
+
+3. toString() method:
+java.lang.ArithmeticException: / by zero
+
+4. getMessage() method:
+/ by zero
