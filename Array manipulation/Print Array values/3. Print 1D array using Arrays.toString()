@@ -1,0 +1,17 @@
+
+Example: Print 1D array using Arrays.toString() method
+
+import java.util.*;
+
+public class DisplayArray {
+  public static void main(String[] args) {
+    
+    int arr[] = {2, 4, 6, 8, 10};
+    
+    System.out.print(Arrays.toString(arr));
+  }
+}
+
+o/p:
+[2, 4, 6, 8, 10]
+
