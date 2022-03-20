@@ -1,7 +1,5 @@
  
-Example 1: Printing 1-D Array values using for loop
-
-//ArrayPrint1D.java
+Example : Printing 1-D Array values using for loop
 
 public class ArrayPrint1D
 {
