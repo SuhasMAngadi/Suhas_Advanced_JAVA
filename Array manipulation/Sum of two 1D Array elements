@@ -1,0 +1,65 @@
+
+Example: Sum of two 1D Array elements
+
+import java.util.*;
+
+public class TwoArraySum {
+  public static void main(String[] args) {
+
+    Scanner s = new Scanner(System.in);
+
+    System.out.print("Enter number of elements in first array: ");
+    int array1size = s.nextInt();
+    System.out.print("Enter number of elements in second array: ");
+    int array2size = s.nextInt();
+
+    // both array must have same number of elements
+    if(array1size != array2size) {
+      System.out.println("Both array must have same number of elements");
+      return; 
+    }
+
+    // declare three array with given size
+    int a1[] = new int[array1size];
+    int a2[] = new int[array1size];
+    int a3[] = new int[array1size];
+
+    // take input for array1 elements
+    System.out.println("Enter first array elements: ");
+    for (int i=0; i<a1.length; i++) {
+      a1[i] = s.nextInt();
+    }
+
+    // take input for array2 elements
+    System.out.println("Enter second array elements: ");
+    for (int i=0; i<a2.length; i++) {
+      a2[i] = s.nextInt();
+    }
+
+    // loop to iterate through the array
+    for (int i=0; i<a3.length; i++) {
+      // add array elements
+      a3[i] = a1[i] + a2[i];
+    }
+
+    // display the third array
+    System.out.println("Resultant Sum Array: " 
+        + Arrays.toString(a3));
+  }
+}
+
+o/p:
+Enter number of elements in first array: 
+3
+Enter number of elements in second array: 
+3
+Enter first array elements: 
+1
+2
+3
+Enter second array elements: 
+3
+2
+1
+Resultant Sum Array: [4, 4, 4]
+
