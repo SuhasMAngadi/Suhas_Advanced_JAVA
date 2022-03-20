@@ -1,0 +1,65 @@
+--------------------------
+Example 1: calculate the average of an array 
+
+public class ArrayAvg {
+  public static void main(String[] args) {
+
+    double a[] = {10, 20, 30, 40, 50};
+    double sum = 0;
+    double avg = 0;
+
+    for (int i=0; i<a.length; i++) {
+      sum += a[i];
+    }
+
+    avg = sum/a.length;
+
+    System.out.println("Average: " + avg );
+  }
+}
+
+o/p:
+Average: 30.0
+
+--------------------------
+Example 2: calculate the average of an array taking input from user
+
+import java.util.*;
+
+public class ArrayAvg {
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter the number of inputs: ");
+    int n = s.nextInt();
+    
+    double a[] = new double[n];
+    
+    System.out.println("Enter array elements: ");
+    for(int i=0; i<a.length; i++){
+        a[i] = s.nextDouble();
+    }
+    double sum = 0;
+    double avg = 0;
+    
+    for (int i=0; i<a.length; i++) {
+      sum += a[i];
+    }
+
+    avg = sum/a.length;
+
+    System.out.println("Average: " + avg );
+  }
+}
+
+o/p:
+Enter the number of inputs: 
+5
+Enter array elements: 
+1
+2
+3
+4
+5
+Average: 3.0
+
+--------------------------
