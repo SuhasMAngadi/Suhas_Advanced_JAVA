@@ -1,0 +1,61 @@
+----------------------------
+Example 1: Calculate the sum of array elements
+
+public class ArraySum {
+  public static void main(String[] args) {
+
+    int a[] = {10, 20, 30, 40, 50};
+
+    int sum = 0;
+
+    for (int i=0; i<a.length; i++) {
+      sum += a[i]; // sum = sum + array[i];
+    }
+
+    System.out.println("Sum of array elements = " + sum);
+
+  }
+}
+
+o/p:
+Sum of array elements = 150
+
+----------------------------
+Example 2: Calculate the sum of array elements by taking input values
+
+import java.util.*;
+public class ArraySum {
+  public static void main(String[] args) {
+    int sum = 0;  
+    Scanner s = new Scanner(System.in); 
+    System.out.print("Enter number of elements: ");
+    int n = s.nextInt();
+    int a[] = new int[n];
+    
+    System.out.println("Enter array elements: ");
+    for (int i=0; i<a.length; i++) {
+      a[i] = s.nextInt();
+    }
+
+    for (int i=0; i<a.length; i++) {
+      sum += a[i]; 
+    }
+
+    System.out.println("Sum of array elements = " + sum);
+
+  }
+}
+
+o/p:
+Enter number of elements: 
+5
+Enter array elements: 
+
+1
+2
+3
+4
+5
+Sum of array elements = 15
+
+----------------------------
