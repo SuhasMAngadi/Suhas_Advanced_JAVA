@@ -1,0 +1,27 @@
+
+Example : Print 2D array using for loops
+
+import java.util.*;
+
+public class DisplayArray {
+  public static void main(String[] args) {
+    
+    int a[][] = {{50,60},{70,80},{90,100}};
+    
+    for (int i=0; i<a.length; i++)
+    {
+        for (int j=0; j<a[i].length; j++)
+        {
+            System.out.print(a[i][j]+" ");
+        }
+        System.out.println();
+    }
+  }
+}
+
+o/p:
+50 60 
+70 80 
+90 100 
+
+
