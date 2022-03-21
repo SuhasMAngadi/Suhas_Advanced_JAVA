@@ -1,0 +1,105 @@
+----------------------------------------------
+Example 1: Merge two arrays using loops
+
+import java.util.*;
+
+public class MergeArray{
+    public static void main (String[] args) {
+        int a1[] = {1,2,3,4};
+        int a2[] = {5,6,7,8};
+        
+        int newArr[] = new int[a1.length + a2.length];
+        
+        for(int i=0; i<a1.length; i++)
+        {
+            newArr[i] = a1[i];
+        }
+        
+        for(int i=0, j=a1.length; j<(a1.length + a2.length); j++, i++)
+        {
+            newArr[j] = a2[i];
+        }
+        System.out.println("Array1: "+Arrays.toString(a1));
+        System.out.println("Array2: "+Arrays.toString(a2));
+        System.out.println("Merged new Array: "+Arrays.toString(newArr));
+    }
+}
+
+o/p:
+Array1: [1, 2, 3, 4]
+Array2: [5, 6, 7, 8]
+Merged new Array: [1, 2, 3, 4, 5, 6, 7, 8]
+
+----------------------------------------------
+Example 2: Merge two array using System.arraycopy() method
+
+Syntax: System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length);
+
+Parameters in this method:-
+
+src:- The source array.
+srcPos:- Starting position in the source array.
+dest:- The destination array.
+destPos:- starting position in the destination array.
+length:- the number of array elements to be copied.
+
+
+import java.util.Arrays;
+
+public class MergeArray {
+
+   public static void main(String[] args) {
+      
+      
+      int src1[] = {10, 20, 30, 40, 50};
+      int src2[] = {9, 18, 27, 36, 45};
+       
+      int newArray[] = new int[src1.length + src2.length];
+      
+      System.arraycopy(src1, 0, newArray, 0, src1.length);
+      
+      System.arraycopy(src2, 0, newArray, src1.length, src2.length);
+      
+      System.out.println("Array1 = " + Arrays.toString(src1));
+      System.out.println("Array2 = " + Arrays.toString(src2));
+      System.out.println("Merged Array = " + Arrays.toString(newArray));
+   }
+}
+
+o/p:
+Array1 = [10, 20, 30, 40, 50]
+Array2 = [9, 18, 27, 36, 45]
+Merged Array = [10, 20, 30, 40, 50, 9, 18, 27, 36, 45]
+
+----------------------------------------------
+Example 3: Merge Two String Arrays
+
+import java.util.Arrays;
+
+public class MergeArray {
+
+   public static void main(String[] args) {
+      
+      
+      String src1[] = {"Java", "Python", "C++"};
+      String src2[] = {"HTML", "CSS", "JavaScript"};
+       
+      String newArray[] = new String[src1.length + src2.length];
+      
+      System.arraycopy(src1, 0, newArray, 0, src1.length);
+      
+      System.arraycopy(src2, 0, newArray, src1.length, src2.length);
+      
+      System.out.println("Array1 = " + Arrays.toString(src1));
+      System.out.println("Array2 = " + Arrays.toString(src2));
+      System.out.println("Merged Array = " + Arrays.toString(newArray));
+   }
+}
+
+o/p:
+
+Array1 = [Java, Python, C++]
+Array2 = [HTML, CSS, JavaScript]
+Merged Array = [Java, Python, C++, HTML, CSS, JavaScript]
+
+----------------------------------------------
