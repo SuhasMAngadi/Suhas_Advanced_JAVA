@@ -1,0 +1,51 @@
+Example 1: Maximum value in an 1D Array
+
+import java.util.*;
+
+public class SearchMax
+{
+    public static void main(String[] args) {
+        int a[] = {3,1,2,0,4};
+        
+        int max = a[0];  
+        for(int i=1; i<a.length; i++)
+        {
+            if(a[i]>a[0])
+            {
+                max = a[i];
+            }
+        }
+        System.out.println("Maximum value in Array is: "+max);    
+    }
+}
+
+o/p:
+Maximum value in Array is: 4
+
+-----------------------------
+Example 2: Minimum value in an 1D Array
+
+import java.util.*;
+
+public class SearchMin
+{
+    public static void main(String[] args) {
+        int a[] = {3,1,2,0,4};
+        
+        int min = a[0];  
+        for(int i=1; i<a.length; i++)
+        {
+            if(a[i]<a[0])
+            {
+                min = a[i];
+            }
+        }
+        System.out.println("Minimum value in Array is: "+min);    
+    }
+}
+
+o/p:
+Minimum value in Array is: 0
+
+-----------------------------
+
