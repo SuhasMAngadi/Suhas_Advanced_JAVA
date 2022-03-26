@@ -1,10 +1,46 @@
 
-To find largest or smallest element at Kth position, suppose there are 1000 elements and if k=100,
-then program will find largest or smallest value at 100th position, this can be achieved using sorting,
+To find Kth largest or smallest element, suppose there are 1000 elements and if k=100,
+then program will find 100th largest or smallest value in array, this can be achieved using sorting,
 we will sort the array in descending order only until Kth position and print smallest or largest at Kth position,
 rest of the elements after Kth position are ignored.
 
-Example 1: Find Largest element at Kth position in 1D Array
+Example 1: Find Kth Largest element in 1D Array
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        int a[] = {6,5,4,3,2,1};
+        
+        int k = 3;     
+        
+        int temp;
+        for(int i=0; i<a.length; i++)
+        {
+            for(int j=i+1; j<a.length-1; j++)
+            {
+                if(a[i]<a[j])
+                {
+                    temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
+            }
+            if (i==k-1)             //because array index starts from 0
+            {
+                System.out.println(k+" th/nd/st Largest element in Array is: "+a[i]);
+                break;
+            }
+        }
+        for(int i=0; i<a.length; i++)
+        {
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+
+o/p:
+
 
 
 
