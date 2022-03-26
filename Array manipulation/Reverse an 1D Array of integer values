@@ -1,0 +1,24 @@
+
+Example: Reverse an 1D Array of integer values
+
+import java.util.*;
+public class ArrayTest {
+
+   public static void main(String[] args) {
+       
+      int a[] = {1, 2, 3, 4, 5};
+      System.out.println("Original Array: "+Arrays.toString(a));
+      
+      for (int i=0; i<a.length/2; i++)
+      {
+          int temp = a[i];
+          a[i] = a[a.length-i-1];
+          a[a.length-i -1] = temp;
+      }
+       System.out.println("Reversed Array: "+Arrays.toString(a));
+   }
+}
+
+o/p:
+Original Array: [1, 2, 3, 4, 5]
+Reversed Array: [5, 4, 3, 2, 1]
