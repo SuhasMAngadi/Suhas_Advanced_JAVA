@@ -1,0 +1,52 @@
+
+Example: Find Sum of Even & Odd Numbers in 1D Array
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArrayTest {
+
+  public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+
+    System.out.print("Enter size of the array: ");
+    int n = scan.nextInt();
+
+    int numbers[] = new int[n];
+
+    System.out.println("Enter array elements: ");
+    for (int i = 0; i < n; ++i) {
+      numbers[i] = scan.nextInt();
+    }
+
+    int oddSum = 0;
+    int evenSum = 0;
+
+    for (int num : numbers) {
+      if (num % 2 == 0) 
+      { 
+        evenSum += num;
+      } 
+      else 
+      {            
+        oddSum += num;
+      }
+    }
+    System.out.println("Odd numbers sum = " + oddSum);
+    System.out.println("Even numbers sum = " + evenSum);
+  }
+}
+
+o/p:
+Enter size of the array: 
+5
+Enter array elements: 
+1
+2
+3
+4
+5
+Odd numbers sum = 9
+Even numbers sum = 6
+
