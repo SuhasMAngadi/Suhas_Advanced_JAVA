@@ -1,0 +1,19 @@
+
+Example: Convert an Array to ArrayList
+
+import java.util.*;
+public class ArrayTest {
+
+   public static void main(String[] args) {
+       
+      String[] s = {"Suhas", "Potato", "Tomato"};
+      
+      ArrayList<String> list = new ArrayList<>(Arrays.asList(s)); 
+      
+      System.out.println(list);
+   }
+}
+
+o/p:
+[Suhas, Potato, Tomato]
+
