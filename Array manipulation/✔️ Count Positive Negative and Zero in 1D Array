@@ -1,7 +1,6 @@
 
 Example: Count Positive Negative and Zero's in 1D Array
 
-
 import java.util.*;
 public class ArrayTest {
 
