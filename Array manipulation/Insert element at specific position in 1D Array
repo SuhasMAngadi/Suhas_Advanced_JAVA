@@ -1,0 +1,30 @@
+
+Note: We traverse the array from the end and push individual elements at current position to next its position
+until we reach the position (from the end) where the new element needs to be inserted. As array size cannot be modified
+once delcared and we keep pushing elements from current position to next its position, the last element of array will
+be lost after instertion of new element.
+
+Example: 
+
+import java.util.*;
+public class ArrayTest {
+
+   public static void main(String[] args) {
+       
+      int a[] = {1, 2, 3, 4, 5};
+      
+      int pos = 3; //element to be inserted a 3rd position i.e index = 2
+      int newElement = 100;
+      
+      for(int i=a.length-1; i>pos-1; i--)    //pos-1 because index value starts from zero
+      {
+          a[i] = a[i-1]; //replacing value at current position with previous position value until position of element to be inserted is reached
+      }
+      a[pos-1] = newElement;
+      System.out.println("Array after insertion: "+Arrays.toString(a));
+   }
+}
+
+o/p:
+
+Array after insertion: [1, 2, 100, 3, 4]
