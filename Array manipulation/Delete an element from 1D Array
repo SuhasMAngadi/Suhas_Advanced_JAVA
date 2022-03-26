@@ -1,0 +1,37 @@
+
+Example: Delete an element from 1D Array at given index position
+
+import java.util.*;
+public class ArrayTest {
+
+   public static void main(String[] args) {
+       
+      int a[] = {1, 2, 3, 4, 5};
+      System.out.println("Original Array: "+Arrays.toString(a));
+      
+      int removeIndex = 2;   //position = 3  
+      
+      for (int i=removeIndex; i< a.length-1; i++)
+      {
+          a[i] = a[i+1];
+      }
+      System.out.println("Array after element deletion: ");
+      
+      /* We cannot alter the size of an array , after the removal,
+       the last & second last element in the array will exist twice & have same value
+       Hence, we only traverse the final o/p array after deletion until length-1
+       so that last eleement isn't printed twice */
+      
+      for (int i=0; i<a.length-1;i++)
+      {
+          System.out.print(a[i]+" "); 
+      }
+       
+   }
+}
+
+o/p:
+Original Array: [1, 2, 3, 4, 5]
+Array after element deletion: 
+1 2 4 5 
+
