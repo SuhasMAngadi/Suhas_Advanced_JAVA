@@ -1,0 +1,55 @@
+
+Example: Count Positive Negative and Zero's in 1D Array
+
+
+import java.util.*;
+public class ArrayTest {
+
+   public static void main(String[] args) {
+      
+      int negCount = 0, posCount = 0, zero = 0;
+      
+      Scanner s = new Scanner(System.in);
+      
+      System.out.print("Enter size of the array: ");
+      int n = s.nextInt();
+      
+      int[] a = new int[n];
+      System.out.println("Enter array elements: ");
+      for (int i = 0; i < n; i++) {
+      a[i] = s.nextInt();
+      }
+      
+      for (int i = 0; i < a.length; i++)
+      {
+          if(a[i] < 0)
+          {
+              negCount++;
+          }
+          else if(a[i] > 0)
+          {
+              posCount++;
+          }
+          else zero++;
+      }
+      System.out.println("Count of the Positive numbers = " + posCount);
+      System.out.println("Count of the Negative numbers = " + negCount);
+      System.out.println("Count of the Zero's = " + zero);
+   }
+}
+
+o/p:
+
+Enter size of the array: 
+5
+Enter array elements: 
+
+0
+1
+-1
+4
+-9
+Count of the Positive numbers = 2
+Count of the Negative numbers = 2
+Count of the Zero's = 1
+
