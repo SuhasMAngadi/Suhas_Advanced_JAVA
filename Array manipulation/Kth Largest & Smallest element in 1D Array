@@ -1,0 +1,12 @@
+
+To find largest or smallest element at Kth position, suppose there are 1000 elements and if k=100,
+then program will find largest or smallest value at 100th position, this can be achieved using sorting,
+we will sort the array in descending order only until Kth position and print smallest or largest at Kth position,
+rest of the elements after Kth position are ignored.
+
+Example 1: Find Largest element at Kth position in 1D Array
+
+
+
+
+
