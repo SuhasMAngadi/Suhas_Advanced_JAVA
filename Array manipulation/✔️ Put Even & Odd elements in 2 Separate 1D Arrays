@@ -1,0 +1,71 @@
+
+Example: Put Even & Odd elements in 2 Separate 1D Arrays 
+
+
+import java.util.*;
+public class ArrayTest {
+
+   public static void main(String[] args) {
+      
+      int countEven = 0;
+      int countOdd = 0;
+      int even[] = null;
+      int odd[] = null;
+
+      Scanner s = new Scanner(System.in);
+      
+      System.out.print("Enter size of the array: ");
+      int n = s.nextInt();
+      
+      int[] a = new int[n];
+      System.out.println("Enter array elements: ");
+      for (int i = 0; i < n; i++) {
+      a[i] = s.nextInt();
+      }
+      
+      // count even numbers
+    for (int i=0; i<a.length; i++) {
+      if (i % 2 == 0)
+        countEven++;
+    }
+    // count odd numbers
+    countOdd = a.length - countEven;
+
+    // create array to store odd and even numbers
+    even = new int[countEven];
+    odd = new int[countOdd];
+    
+    int i = 0, j = 0;
+     
+    for (int num=0; num < a.length; num++) {
+      if (num % 2 == 0)
+      { 
+        even[i] = num;
+        i++;
+      } else
+      {
+        odd[j] = num;
+        j++;
+      }
+    }
+    
+    System.out.println("Even numbers Array: "+ Arrays.toString(even));
+    System.out.println("Odd numbers Array: "+ Arrays.toString(odd));
+   }
+}
+
+o/p:
+
+Enter size of the array: 
+5
+Enter array elements: 
+
+1
+2
+3
+4
+5
+Even numbers Array: [0, 2, 4]
+Odd numbers Array: [1, 3]
+
+
