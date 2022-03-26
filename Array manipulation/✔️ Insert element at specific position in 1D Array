@@ -4,7 +4,7 @@ until we reach the position (from the end) where the new element needs to be ins
 once delcared and we keep pushing elements from current position to next its position, the last element of array will
 be lost after instertion of new element.
 
-Example: 
+Example: Insert element at specific position in 1D Array
 
 import java.util.*;
 public class ArrayTest {
@@ -28,3 +28,5 @@ public class ArrayTest {
 o/p:
 
 Array after insertion: [1, 2, 100, 3, 4]
+
+
