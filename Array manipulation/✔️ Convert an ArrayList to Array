@@ -1,0 +1,30 @@
+
+Example: Convert an ArrayList to Array
+
+import java.util.ArrayList;
+import java.util.*;
+public class ArrayTest {
+
+   public static void main(String[] args) {
+      
+      ArrayList<String> list = new ArrayList<>(); 
+      
+      list.add("Suhas");
+      list.add("is");
+      list.add("Smart");
+      
+      String[] s = new String[list.size()];
+      list.toArray(s);
+      
+      for(String i : s)
+      {  
+            System.out.println(i);  
+      }  
+   }
+}
+
+o/p:
+Suhas
+is
+Smart
+
