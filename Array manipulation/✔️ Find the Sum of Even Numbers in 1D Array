@@ -1,0 +1,41 @@
+
+Example: Find the Sum of Even Numbers in 1D Array
+
+import java.util.*;
+public class ArrayTest {
+  public static void main(String[] args) {
+
+    Scanner scan = new Scanner(System.in);
+
+    System.out.print("Enter size of the array: ");
+    int n = scan.nextInt();
+
+    int numbers[] = new int[n];
+
+    System.out.println("Enter array elements: ");
+    for (int i = 0; i < n; i++) {
+      numbers[i] = scan.nextInt();
+    }
+
+    int sum = 0;
+    
+    for (int i : numbers) 
+    {
+      if(i % 2 == 0)
+        sum += i;
+    }
+    System.out.println("Sum of Even numbers = " + sum);
+  }
+}
+
+o/p:
+Enter size of the array: 
+4
+Enter array elements: 
+1
+2
+3
+4
+Sum of Even numbers = 6
+
+
