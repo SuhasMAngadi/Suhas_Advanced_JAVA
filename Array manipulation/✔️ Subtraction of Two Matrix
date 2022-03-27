@@ -1,0 +1,45 @@
+
+Example: Subtraction of Two Matrix
+
+import java.util.Arrays;
+
+public class Matrix {
+
+  public static void main(String[] args) {
+
+    int a[][] = { { 1, 1, 1 }, { 2, 2, 2 }, { 3, 3, 3 } };
+    int b[][] = { { 5, 5, 5 }, { 2, 2, 2 }, { 1, 1, 1 } };
+
+    int row = a.length;
+    int column = a[0].length;
+
+    int diff[][] = new int[row][column];
+    
+    for(int i=0; i<row; i++)
+    {
+       for(int j=0; j<column; j++) 
+       {
+         diff[i][j] = a[i][j] - b[i][j];
+       }
+    }
+    
+    System.out.println("A = " + Arrays.deepToString(a));
+    System.out.println("B = " + Arrays.deepToString(b));
+    System.out.println("Difference of A & B: ");
+    for(int i=0; i<diff.length; i++) {
+      for(int j=0; j<diff[0].length; j++) {
+        System.out.print(diff[i][j]+" ");
+      }
+      System.out.println(); 
+    }
+  }
+}
+
+o/p:
+A = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+B = [[5, 5, 5], [2, 2, 2], [1, 1, 1]]
+Difference of A & B: 
+-4 -4 -4 
+0 0 0 
+2 2 2 
+
