@@ -1,0 +1,87 @@
+
+Example: Sum of individual Rows & Columns in Matrix
+
+import java.util.*;
+public class Matrix {
+
+  public static void main(String[] args) {
+
+    Scanner s = new Scanner(System.in);
+    
+    int row = 0, column = 0;
+    int a[][] = null;
+    
+    System.out.println("Enter row size of matrix: ");
+    row = s.nextInt();
+    System.out.println("Enter column size of matrix: ");
+    column = s.nextInt();
+    
+    a = new int[row][column];
+    
+    System.out.println("Enter Matrix elements: ");
+    for(int i=0; i<a.length; i++)
+    {
+        for(int j=0; j<a[0].length; j++)
+        {
+            a[i][j] = s.nextInt();
+        }
+    }
+    
+    System.out.println("Entered matrix is: ");
+    for(int i=0; i<a.length; i++)
+    {
+        for(int j=0; j<a[i].length; j++)
+        {
+            System.out.print(a[i][j]+" ");
+        }
+        System.out.println();
+    }
+    System.out.println();
+    
+    int rowsum;
+    int columnsum;
+    
+    for (int i = 0; i < a.length; i++) {
+
+      rowsum = 0;
+      columnsum = 0;
+
+      for (int j = 0; j < a[0].length; j++)
+      {
+        rowsum += a[i][j];
+        columnsum += a[j][i];
+      }
+      System.out.println("Row" + (i + 1) + " sum = " + rowsum);
+      System.out.println("Column" + (i + 1) + " sum = " + columnsum);
+    }
+  }
+}
+
+o/p:
+Enter row size of matrix: 
+
+3
+Enter column size of matrix: 
+3
+Enter Matrix elements: 
+1
+1
+1
+1
+2
+3
+3
+2
+1
+Entered matrix is: 
+1 1 1 
+1 2 3 
+3 2 1 
+
+Row1 sum = 3
+Column1 sum = 5
+Row2 sum = 6
+Column2 sum = 5
+Row3 sum = 6
+Column3 sum = 5
+
