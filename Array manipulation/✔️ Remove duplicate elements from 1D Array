@@ -44,3 +44,39 @@ o/p:
 Original array: [70, 60, 10, 10, 10, 20, 30, 40, 40]
 After removing duplicates: [10, 20, 30, 40, 60, 70]
 
+Alternate solution:
+
+import java.util.*;
+public class ArrayTest {
+
+   public static void main(String[] args) {
+       
+      int arr[] = {70, 60, 10, 10, 10, 20, 30, 40, 40};
+      System.out.println("Original array: "+ Arrays.toString(arr));
+      
+      int j = 0; 
+      int l = arr.length-1; 
+      
+      // loop to iterate the array (except last element)
+      for (int i = 0; i < l; i++) {
+         if(arr[i] != arr[i+1]) {
+            arr[j] = arr[i];    //these two lines can be directly written as arr[j++] = arr[i]; as shown below 
+            j++;
+         }
+      }
+      
+      // for the last element
+      if(arr[j] != arr[l])
+         arr[j++] = arr[l];   //this line can be written as arr[j] = arr[l]; j++; as shown above
+         
+      
+      // return new copied array
+       int newArr[] = Arrays.copyOf(arr,j);
+      
+      Arrays.sort(newArr); //sort the new array
+      
+      System.out.println("After removing duplicates: " + Arrays.toString(newArr));
+   }
+}
+
+
